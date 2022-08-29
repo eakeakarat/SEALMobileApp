@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="SEALMobile.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="LightBlue" Padding="20">
+            <Label Text="MOBILE APP DEMO" HorizontalTextAlignment="Center" TextColor="White" FontSize="40"/>
+        </Frame>
+        <StackLayout Padding="10">
+            <Label x:Name="k_Label" HorizontalTextAlignment="Center" >No Key</Label>
+            <Button Text="Generate Key" Clicked="HandleKeyGenBtn" />
+        </StackLayout>
+        <StackLayout Padding="5" HorizontalOptions="Center">
+            <Entry x:Name="a_value" Placeholder="Enter Value A"></Entry>
+            <Entry x:Name="b_value" Placeholder="Enter Value B"></Entry>
+        </StackLayout>
+        <StackLayout>
+            <Label x:Name="cr_Label" HorizontalTextAlignment="Center" >A^2 + B^2 =</Label>
+            <Button Text="Compute" Clicked="HandleComputeBtn"/>
+        </StackLayout>
+        <StackLayout>
+            <Label x:Name="dr_Label" HorizontalTextAlignment="Center" >No decrypted result</Label>
+            <Button Text="Decrypt cipher" Clicked="HandleDecryptedBtn"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "mKch98eYEmRQl4anU3wGXkt6JstdsTmaf2/QFo8G/QaywROvQXtTfHkEYBpO5svhSxdOUxH4WgpH4McoeZWObQ==",
+  "success": true,
+  "projectFilePath": "/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/SEALMobile.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/eakarat/.nuget/packages/microsoft.research.sealnet/4.0.0/microsoft.research.sealnet.4.0.0.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/system.net.http/4.3.4/system.net.http.4.3.4.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
