@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/eakarat/.dotnet/store/|arch|/|tfm|",
+      "/Users/eakarat/.nuget/packages"
+    ]
+  }
+}

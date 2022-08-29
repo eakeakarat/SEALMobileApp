@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZfIpsQeLUbImkiN1RU5EXXh7Gw2Uha9NY7zZtRMzRFiWcjK5xMQSw2h38G3aR9e0eRMyf+GGJ2AYZ3DnMO7eVw==",
+  "success": true,
+  "projectFilePath": "/Users/eakarat/Documents/GradProjectCode/SEAL-XamarinService-DEMO/evaluator/evaluator.csproj",
+  "expectedPackageFiles": [
+    "/Users/eakarat/.nuget/packages/microsoft.research.sealnet/4.0.0/microsoft.research.sealnet.4.0.0.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
