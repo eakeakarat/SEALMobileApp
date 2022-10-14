@@ -12,15 +12,44 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Microsoft.Research.SEALNet" Version="4.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.4" />
+    <PackageReference Include="DevExpress.XamarinForms.Charts" Version="22.1.5" />
+    <PackageReference Include="GraphQL.Client" Version="5.1.0" />
+    <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="5.1.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Microsoft.Research.SEALNet" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="System.Net.Http" />
+    <None Remove="Models\" />
+    <None Remove="Views\" />
+    <None Remove="ZXing.Net.Mobile" />
+    <None Remove="Services\" />
+    <None Remove="ZXing.Net.Mobile.Forms" />
+    <None Remove="Xamarin.CommunityToolkit" />
+    <None Remove="Syncfusion.Xamarin.SfChart" />
+    <None Remove="DevExpress.XamarinForms.Charts" />
+    <None Remove="NotUse\" />
+    <None Remove="GraphQL.Client" />
+    <None Remove="GraphQL.Client.Serializer.Newtonsoft" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="Services\" />
+    <Folder Include="NotUse\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MyScanner.xaml.cs">
+      <DependentUpon>MyScanner.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

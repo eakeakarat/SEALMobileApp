@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="SEALMobile.iOS.app/SEALMobile.iOS">
+      <BCSymbolMapName>SEALMobile.iOS.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>SEALMobile.iOS.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>obj/iPhoneSimulator/Debug/device-builds/iphone 12 pro max-15.5/mtouch-symbols.list</SymbolFile>
+      <DSymName>SEALMobile.iOS.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    x:Class="SEALMobile.Views.KeyGeneratorPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+
+            <!--<Picker BackgroundColor="DarkBlue"
+                    ios:Picker.UpdateMode="WhenFinished"/>-->
+            <Label Text="Choose context size:" FontSize="Small"/>
+            <Picker BackgroundColor="Beige"
+                    Title="Context Size"
+                    x:Name="Dropdown"
+                    WidthRequest="200" 
+                    ItemsSource="{Binding SizeList}"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedIndexChanged="Picker_SelectedContextSize"/>
+            <Button  Text="Generate Keys"
+                     x:Name="GenKeyBtn"
+                     Clicked="KeyGen_Button_Clicked"
+                     VerticalOptions="End" HorizontalOptions="Center" 
+                     HeightRequest="50" WidthRequest="180" Margin="20"
+                     BackgroundColor="LightGray"
+                     />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

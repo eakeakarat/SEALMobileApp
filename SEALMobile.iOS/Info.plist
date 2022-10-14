@@ -21,7 +21,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>15.2</string>
+	<string>15.4</string>
 	<key>CFBundleDisplayName</key>
 	<string>SEALMobile</string>
 	<key>CFBundleIdentifier</key>
@@ -34,5 +34,7 @@
 	<string>SEALMobile</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app want to scan QR code</string>
 </dict>
 </plist>

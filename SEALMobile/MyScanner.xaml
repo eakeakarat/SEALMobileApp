@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xctViews:Popup
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    IsLightDismissEnabled="False"
+    
+    x:Class="SEALMobile.MyScanner"
+    xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+    xmlns:xctViews="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+    >
+
+    <StackLayout>
+        <Label x:Name="label" Text="Scanning..." VerticalOptions="Start" HorizontalOptions="Center"/>
+        <zxing:ZXingScannerView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="scanner" IsScanning="True" OnScanResult="scanner_OnScanResult"  />
+        <Label x:Name="label_scan" IsVisible="false" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"/>
+        <Button Text="Close Scanner" Clicked="Button_Clicked" VerticalOptions="End" HorizontalOptions="Center"/>
+    </StackLayout>
+
+</xctViews:Popup>

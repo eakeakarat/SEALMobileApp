@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SEALMobile.Views;
 
 namespace SEALMobile
 {
@@ -8,9 +10,23 @@ namespace SEALMobile
     {
         public App()
         {
-            InitializeComponent();
+            DevExpress.XamarinForms.Charts.Initializer.Init();
 
-            MainPage = new MainPage();
+            InitializeComponent();
+            //MainPage = new MainPage();
+
+            MainPage = new NavigationPage(new LoginPage());
+            //MainPage = new NavigationPage(new UserHomePage());
+            //MainPage = new NavigationPage(new ProjectPage());
+            //MainPage = new NavigationPage(new EdgeDetailPage("123"));
+
+            //MainPage = new NavigationPage(new MyPage2("test"));
+            //MainPage = new NavigationPage(new MyPage3("test"));
+            //MainPage = new NavigationPage(new MyPage4());
+
+
+
+
         }
 
         protected override void OnStart()

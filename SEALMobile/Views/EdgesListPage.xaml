@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SEALMobile.Views.EdgesListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView BackgroundColor="Bisque"
+                      VerticalOptions="Center"
+                      HeightRequest="350"
+                      Margin="10"
+                      ItemsSource="{Binding Edges}"
+                      x:Name="EdgeListView"
+                      ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <TextCell Text="{Binding alias}"
+                              Detail="{Binding deviceid}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label x:Name="label"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -9,15 +9,99 @@
     ".NETStandard,Version=v2.0/": {
       "SEALMobile/1.0.0": {
         "dependencies": {
+          "DevExpress.XamarinForms.Charts": "22.1.5",
+          "GraphQL.Client": "5.1.0",
+          "GraphQL.Client.Serializer.Newtonsoft": "5.1.0",
           "Microsoft.Research.SEALNet": "4.0.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.1",
           "System.Net.Http": "4.3.4",
-          "Xamarin.Essentials": "1.6.1",
-          "Xamarin.Forms": "5.0.0.2012"
+          "Xamarin.CommunityToolkit": "2.0.4",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2515",
+          "ZXing.Net.Mobile": "2.4.1",
+          "ZXing.Net.Mobile.Forms": "2.4.1"
         },
         "runtime": {
           "SEALMobile.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Charts/22.1.5": {
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "22.1.5",
+          "Xamarin.Forms": "5.0.0.2515"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DevExpress.XamarinForms.Charts.dll": {
+            "assemblyVersion": "22.1.5.0",
+            "fileVersion": "22.1.5.0"
+          }
+        }
+      },
+      "DevExpress.XamarinForms.Core/22.1.5": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2515"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DevExpress.XamarinForms.Core.dll": {
+            "assemblyVersion": "22.1.5.0",
+            "fileVersion": "22.1.5.0"
+          }
+        }
+      },
+      "GraphQL.Client/5.1.0": {
+        "dependencies": {
+          "GraphQL.Client.Abstractions": "5.1.0",
+          "GraphQL.Client.Abstractions.Websocket": "5.1.0",
+          "System.Reactive": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.dll": {
+            "assemblyVersion": "5.1.0.0",
+            "fileVersion": "5.1.0.0"
+          }
+        }
+      },
+      "GraphQL.Client.Abstractions/5.1.0": {
+        "dependencies": {
+          "GraphQL.Primitives": "5.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.dll": {
+            "assemblyVersion": "5.1.0.0",
+            "fileVersion": "5.1.0.0"
+          }
+        }
+      },
+      "GraphQL.Client.Abstractions.Websocket/5.1.0": {
+        "dependencies": {
+          "GraphQL.Client.Abstractions": "5.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {
+            "assemblyVersion": "5.1.0.0",
+            "fileVersion": "5.1.0.0"
+          }
+        }
+      },
+      "GraphQL.Client.Serializer.Newtonsoft/5.1.0": {
+        "dependencies": {
+          "GraphQL.Client.Abstractions.Websocket": "5.1.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {
+            "assemblyVersion": "5.1.0.0",
+            "fileVersion": "5.1.0.0"
+          }
+        }
+      },
+      "GraphQL.Primitives/5.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Primitives.dll": {
+            "assemblyVersion": "5.1.0.0",
+            "fileVersion": "5.1.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.1": {},
@@ -259,6 +343,18 @@
           }
         }
       },
+      "System.Reactive/5.0.0": {
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.1"
+          }
+        }
+      },
       "System.Reflection/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -266,6 +362,25 @@
           "System.IO": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.19.56404"
+          }
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.19.56404"
+          }
         }
       },
       "System.Reflection.Primitives/4.3.0": {
@@ -290,6 +405,14 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.1",
+            "fileVersion": "4.6.28619.1"
+          }
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -312,6 +435,17 @@
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.3.0"
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
+          }
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -489,7 +623,31 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "Xamarin.Essentials/1.6.1": {
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {
+            "assemblyVersion": "4.2.0.1",
+            "fileVersion": "4.6.28619.1"
+          }
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.4": {
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2515"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.7.3": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -500,19 +658,47 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2012": {
+      "Xamarin.Forms/5.0.0.2515": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.671"
+            "fileVersion": "5.0.0.946"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.671"
+            "fileVersion": "5.0.0.946"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "5.0.0.671"
+            "fileVersion": "5.0.0.946"
+          }
+        }
+      },
+      "ZXing.Net.Mobile/2.4.1": {
+        "runtime": {
+          "lib/netstandard1.0/ZXing.Net.Mobile.Core.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          },
+          "lib/netstandard1.0/ZXingNetMobile.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          },
+          "lib/netstandard1.0/zxing.portable.dll": {
+            "assemblyVersion": "0.16.2.0",
+            "fileVersion": "0.16.2.0"
+          }
+        }
+      },
+      "ZXing.Net.Mobile.Forms/2.4.1": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2515",
+          "ZXing.Net.Mobile": "2.4.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/ZXing.Net.Mobile.Forms.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
           }
         }
       }
@@ -523,6 +709,55 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "DevExpress.XamarinForms.Charts/22.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0dWauuh1coPn/XLv7gUuJ6GqcZYtOJYUk0wYzqyxVFT0+vGJi3ro5IYW9LZdoq9oSDzXceBYyPGEwzPCXDEakQ==",
+      "path": "devexpress.xamarinforms.charts/22.1.5",
+      "hashPath": "devexpress.xamarinforms.charts.22.1.5.nupkg.sha512"
+    },
+    "DevExpress.XamarinForms.Core/22.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-goMu+5gG9G6mRZylUG95N86AaPC3mUzwWVC9OUIio6d+nQzzzIccVC/ieNAgW8IKv9l1fEh1utDzh25JS02BPQ==",
+      "path": "devexpress.xamarinforms.core/22.1.5",
+      "hashPath": "devexpress.xamarinforms.core.22.1.5.nupkg.sha512"
+    },
+    "GraphQL.Client/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ygsFiS/+DSQBmfP1kjmVk8igODFGNihy81EzTqrq7RmwHgyS34+5Nm9Jkd4mgpFsC8a8UZaWerTilKGqDyePHg==",
+      "path": "graphql.client/5.1.0",
+      "hashPath": "graphql.client.5.1.0.nupkg.sha512"
+    },
+    "GraphQL.Client.Abstractions/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IwZUs8WZtSUorZMKaqxykA/PFtn59gVcwbmkPecjnts2mk+sj/x2owlVbv5SnS2f9Za54zFPG2U3YOGZwBk3NQ==",
+      "path": "graphql.client.abstractions/5.1.0",
+      "hashPath": "graphql.client.abstractions.5.1.0.nupkg.sha512"
+    },
+    "GraphQL.Client.Abstractions.Websocket/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4Pctkq7yrhzDYDrR/BGhsp6HEM4i9JHaBQ2KQIeIzDjHGY55YueIRujGcFziJ8KGFRJvQxnpjrGX2+FPRANNCQ==",
+      "path": "graphql.client.abstractions.websocket/5.1.0",
+      "hashPath": "graphql.client.abstractions.websocket.5.1.0.nupkg.sha512"
+    },
+    "GraphQL.Client.Serializer.Newtonsoft/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SM7ijGJqtFbTsHedjMnDNfGCQqz+ha5C+8XsvV5k59fu+7qnWQ333+LqlkHrKO0s77BMGzZ9dHWakRpQAdMcPg==",
+      "path": "graphql.client.serializer.newtonsoft/5.1.0",
+      "hashPath": "graphql.client.serializer.newtonsoft.5.1.0.nupkg.sha512"
+    },
+    "GraphQL.Primitives/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NQmodHoO343gQW9/LbBWteRWlQhLxHV661s3Su8lHl2bPHZ0eauWBkjzWuVY9mLDo54mEDhQv5dTCkFnW21meA==",
+      "path": "graphql.primitives/5.1.0",
+      "hashPath": "graphql.primitives.5.1.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.1": {
       "type": "package",
@@ -769,12 +1004,33 @@
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
+    "System.Reactive/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+      "path": "system.reactive/5.0.0",
+      "hashPath": "system.reactive.5.0.0.nupkg.sha512"
+    },
     "System.Reflection/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
       "path": "system.reflection/4.3.0",
       "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.ILGeneration/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AucBYo3DSI0IDxdUjKksBcQJXPHyoPyrCXYURW1WDsLI4M65Ar/goSHjdnHOAY9MiYDNKqDlIgaYm+zL2hA1KA==",
+      "path": "system.reflection.emit.ilgeneration/4.7.0",
+      "hashPath": "system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.Lightweight/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA==",
+      "path": "system.reflection.emit.lightweight/4.7.0",
+      "hashPath": "system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
     },
     "System.Reflection.Primitives/4.3.0": {
       "type": "package",
@@ -797,6 +1053,13 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
+    "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3TIsJhD1EiiT0w2CcDMN/iSSwnNnsrnbzeVHSKkaEgV85txMprmuO+Yq2AdSbeVGcg28pdNDTPK87tJhX7VFHw==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.3",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512"
+    },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -817,6 +1080,13 @@
       "sha512": "sha512-uv1ynXqiMK8mp1GM3jDqPCFN66eJ5w5XNomaK2XD+TuCroNTLFGeZ+WCmBMcBDyTFKou3P6cR6J/QsaqDp7fGQ==",
       "path": "system.runtime.interopservices/4.3.0",
       "hashPath": "system.runtime.interopservices.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "hashPath": "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
     },
     "System.Runtime.Numerics/4.3.0": {
       "type": "package",
@@ -895,19 +1165,47 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.6.1": {
+    "System.Threading.Tasks.Extensions/4.5.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
-      "path": "xamarin.essentials/1.6.1",
-      "hashPath": "xamarin.essentials.1.6.1.nupkg.sha512"
+      "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
-    "Xamarin.Forms/5.0.0.2012": {
+    "Xamarin.CommunityToolkit/2.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
-      "path": "xamarin.forms/5.0.0.2012",
-      "hashPath": "xamarin.forms.5.0.0.2012.nupkg.sha512"
+      "sha512": "sha512-ZpBCT3cl0UTpKQZefokcohRQB4YewZPWqoMoBIVJfmjatYb6pj4i1/WVRMmIGdZTNiT6WtZ+Nv4w6HypaBHrTg==",
+      "path": "xamarin.communitytoolkit/2.0.4",
+      "hashPath": "xamarin.communitytoolkit.2.0.4.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.7.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b6NfxOfkmMGN54a4OcV/D7KXclWWqFwgixMPzlAku3kfKgUBGW4vBdNaujIBmk57NbGpWB2IS78ek0gDHNKwoQ==",
+      "path": "xamarin.essentials/1.7.3",
+      "hashPath": "xamarin.essentials.1.7.3.nupkg.sha512"
+    },
+    "Xamarin.Forms/5.0.0.2515": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n/Y/xk1idWRkxk7xItwvNwwda7CHpIk7JxD6tXkGXmTqiVGV1xRkepf5aKXFkQLM9KIQhXXYBxPsdyJysPpktw==",
+      "path": "xamarin.forms/5.0.0.2515",
+      "hashPath": "xamarin.forms.5.0.0.2515.nupkg.sha512"
+    },
+    "ZXing.Net.Mobile/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iCL2WcqOyUnC1iFFdzXijk0EXfoLMDqW88MyhoTZigSyhJZM2C5hKgSZVyfx9E35tgkde/IZwHkk8cVDnbQlYg==",
+      "path": "zxing.net.mobile/2.4.1",
+      "hashPath": "zxing.net.mobile.2.4.1.nupkg.sha512"
+    },
+    "ZXing.Net.Mobile.Forms/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7z+MfL8TbfE36s1GGvrnlkhLUOV5dgdn1gYhUb3GU2W6YXzpfF39k6EqkmFsyNm1O07evTaKFgh7UTOqcWub3g==",
+      "path": "zxing.net.mobile.forms/2.4.1",
+      "hashPath": "zxing.net.mobile.forms.2.4.1.nupkg.sha512"
     }
   }
 }

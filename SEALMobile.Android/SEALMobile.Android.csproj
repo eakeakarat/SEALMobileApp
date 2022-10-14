@@ -53,8 +53,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
@@ -64,11 +64,30 @@
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>
     </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile.Forms">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.CommunityToolkit">
+      <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="DevExpress.XamarinForms.Charts">
+      <Version>22.1.5</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL.Client">
+      <Version>5.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft">
+      <Version>5.1.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\QrScanningService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -93,10 +112,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SEALMobile\SEALMobile.csproj">
-      <Project>{81FD13E8-10A9-435F-A79D-331BEDADE536}</Project>
+      <Project>{2BA1BFAB-1475-45BA-AE22-89430D965661}</Project>
       <Name>SEALMobile</Name>
     </ProjectReference>
   </ItemGroup>

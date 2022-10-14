@@ -77,7 +77,7 @@ namespace SEALMobile
             //string parmsRes = "XqEQBAACAABjAAAAAAAAACi1L/0g6VUCALQCAgAgAAgAXqEQBBgAAAABgP7/////D8DW//9A5wDowPP0/f8AAAAAAAAAAAwAK/MJqA/UDNQNKG2n0qai885xFGYsKwPELSAC";
             MemoryStream parmsStream = ToMemoryStream(parmsRes);
             parms.Load(parmsStream);
-            context = new SEALContext(parms);
+            context = new SEALContext(parms, true, SecLevelType.None);
            
 
             // create key generator to create keys(SecretKey, PublicKey, RelinKeys)

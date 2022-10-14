@@ -21,7 +21,8 @@
           "monoandroid11.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/xRAGJZjn3jEmUE9rSOJjb4gFeOd56wEaFxvzsVwr8DqR7iEMHm/api": {}
         },
         "frameworks": {
           "monoandroid11.0": {
@@ -36,6 +37,18 @@
       "frameworks": {
         "monoandroid11.0": {
           "dependencies": {
+            "DevExpress.XamarinForms.Charts": {
+              "target": "Package",
+              "version": "[22.1.5, )"
+            },
+            "GraphQL.Client": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "GraphQL.Client.Serializer.Newtonsoft": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
             "Microsoft.Research.SEALNet": {
               "target": "Package",
               "version": "[4.0.0, )"
@@ -48,13 +61,25 @@
               "target": "Package",
               "version": "[4.3.4, )"
             },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.3, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2515, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           }
         }
@@ -76,7 +101,8 @@
           "netstandard2.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/xRAGJZjn3jEmUE9rSOJjb4gFeOd56wEaFxvzsVwr8DqR7iEMHm/api": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -94,6 +120,18 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "DevExpress.XamarinForms.Charts": {
+              "target": "Package",
+              "version": "[22.1.5, )"
+            },
+            "GraphQL.Client": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "GraphQL.Client.Serializer.Newtonsoft": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
             "Microsoft.Research.SEALNet": {
               "target": "Package",
               "version": "[4.0.0, )"
@@ -112,13 +150,25 @@
               "target": "Package",
               "version": "[4.3.4, )"
             },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.3, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2515, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [
