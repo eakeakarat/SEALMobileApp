@@ -17,23 +17,24 @@ namespace SEALMobile.Views
 {
     public partial class UserHomePage
     {
-        string path;
-        string token;
-        ProjectsViewModel viewModel;
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            BindingContext = new ProjectsViewModel();
+        }
 
         public UserHomePage()
         {
-
             InitializeComponent();
             Title = "HOME PAGE";
-            viewModel = new ProjectsViewModel();
-            BindingContext = viewModel;
+            BindingContext = new ProjectsViewModel();
+            base.OnAppearing();
 
         }
 
         void Handle_CreateProject(object sender, System.EventArgs e)
         {
-            //Navigation.PushAsync(new CreateProjectPage(), true);
+            Navigation.PushAsync(new CreateProjectPage(), true);
         }
 
         void ListView_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)

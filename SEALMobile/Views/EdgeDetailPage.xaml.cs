@@ -39,7 +39,7 @@ namespace SEALMobile.Views
             edge = e;
             projectid = id;
             Title = edge.alias;
-            detail_label.Text = "Description: \n" + edge.description;
+            detail_label.Text = edge.description;
 
             model = new EgdeDetailViewModel(edge);
 

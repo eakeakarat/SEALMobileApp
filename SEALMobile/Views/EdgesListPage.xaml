@@ -20,6 +20,7 @@
                 </ListView.ItemTemplate>
             </ListView>
             <Label x:Name="label"/>
+            <Button Text="Create Edge" Clicked="Button_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

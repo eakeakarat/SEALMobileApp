@@ -18,7 +18,7 @@ namespace SEALMobile
             MainPage = new NavigationPage(new LoginPage());
             //MainPage = new NavigationPage(new UserHomePage());
             //MainPage = new NavigationPage(new ProjectPage());
-            //MainPage = new NavigationPage(new EdgeDetailPage("123"));
+            //MainPage = new NavigationPage(new CreateProjectPage());
 
             //MainPage = new NavigationPage(new MyPage2("test"));
             //MainPage = new NavigationPage(new MyPage3("test"));

@@ -28,7 +28,7 @@ namespace SEALMobile.Models
 
             var deviceREQ = new GraphQLRequest
             {
-                Query = @"query {device(deviceid: did){
+                Query = @"query($did:String!) {device(deviceid: $did){
                             alias,description,deviceid,devicetoken,devicesecret,projectid
                         }}",
                 Variables = new

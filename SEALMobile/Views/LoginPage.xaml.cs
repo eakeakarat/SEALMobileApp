@@ -64,9 +64,8 @@ namespace SEALMobile.Views
                 var res = graphQLResponse.Data.login;
                 var path = Path.Combine(documents, dir, "access_token.txt");
                 File.WriteAllText(path, res.access_token);
-
-                await Navigation.PushAsync(new UserHomePage(), true);
-
+                var home = new UserHomePage();
+                await Navigation.PushAsync(home, true);
             }
             catch
             {

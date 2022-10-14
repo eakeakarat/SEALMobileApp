@@ -8,14 +8,20 @@ namespace SEALMobile.Views
     public partial class EdgesListPage : ContentPage
     {
         Project project;
-        EdgesViewModel viewModel;
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            BindingContext = new EdgesViewModel(project);
+        }
+
         public EdgesListPage(Project pj)
         {
             InitializeComponent();
             project = pj;
             Title = project.projectname;
-            viewModel = new EdgesViewModel(project);
-            BindingContext = viewModel;
+            BindingContext = new EdgesViewModel(project);
+            base.OnAppearing();
 
 
         }
@@ -25,6 +31,11 @@ namespace SEALMobile.Views
             Edge edge = (Edge)EdgeListView.SelectedItem;
             Navigation.PushAsync(new EdgeDetailPage(edge,project.projectid), true);
 
+        }
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new CreateEdgePage(project), true);
         }
     }
 }
