@@ -20,6 +20,7 @@ namespace SEALMobile.Views
         string pkPath;
         string cotPath;
         string hashPath;
+        string scalePath;
 
         Project project;
 
@@ -46,6 +47,7 @@ namespace SEALMobile.Views
             pkPath = Path.Combine(documents, pjName, "publicKey.txt");
             cotPath = Path.Combine(documents, pjName, "context.txt");
             hashPath = Path.Combine(documents, pjName, "hash.txt");
+            scalePath = Path.Combine(documents, pjName, "scale.txt");
 
         }
         void Picker_SelectedContextSize(object sender, EventArgs e)
@@ -99,6 +101,7 @@ namespace SEALMobile.Views
                 File.WriteAllText(pkPath, pkBase64);
                 File.WriteAllText(rlkPath, rlkBase64);
                 File.WriteAllText(cotPath, cotBase64);
+                File.WriteAllText(scalePath, contextSize.scale + "");
 
                 GenKeyBtn.Text = "Key Generated !";
                 Dropdown.SelectedIndex = 0;

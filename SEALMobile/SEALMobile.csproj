@@ -19,10 +19,13 @@
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
     <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.4" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
     <PackageReference Include="DevExpress.XamarinForms.Charts" Version="22.1.5" />
     <PackageReference Include="GraphQL.Client" Version="5.1.0" />
     <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="5.1.0" />
+    <PackageReference Include="MQTTnet" Version="4.1.1.318" />
+    <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="4.1.1.318" />
+    <PackageReference Include="MQTTnet.AspNetCore" Version="4.1.1.318" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Microsoft.Research.SEALNet" />
@@ -39,6 +42,10 @@
     <None Remove="NotUse\" />
     <None Remove="GraphQL.Client" />
     <None Remove="GraphQL.Client.Serializer.Newtonsoft" />
+    <None Remove="MQTTnet" />
+    <None Remove="M2Mqtt" />
+    <None Remove="MQTTnet.Extensions.ManagedClient" />
+    <None Remove="MQTTnet.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

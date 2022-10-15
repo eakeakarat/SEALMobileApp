@@ -2,10 +2,12 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="SEALMobile.Views.EdgesListPage">
+    x:Class="SEALMobile.Views.EdgesListPage"
+    NavigationPage.BackButtonTitle="Back">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView BackgroundColor="Bisque"
+        <StackLayout Margin="15">
+            <Label HorizontalOptions="Center" Text="My Edge List"/>
+            <ListView BackgroundColor="LightGray"
                       VerticalOptions="Center"
                       HeightRequest="350"
                       Margin="10"
@@ -20,7 +22,12 @@
                 </ListView.ItemTemplate>
             </ListView>
             <Label x:Name="label"/>
-            <Button Text="Create Edge" Clicked="Button_Clicked" />
+            <Button Text="Create Edge"
+                    Clicked="Button_Clicked"
+                    VerticalOptions="End" HorizontalOptions="Center" 
+                     HeightRequest="50" WidthRequest="180" Margin="20"
+                     BackgroundColor="LightGray"
+                    />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

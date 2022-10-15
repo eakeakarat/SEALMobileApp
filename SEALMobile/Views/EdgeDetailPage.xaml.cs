@@ -44,7 +44,6 @@ namespace SEALMobile.Views
             model = new EgdeDetailViewModel(edge);
 
 
-            test();
 
         }
 
@@ -69,6 +68,8 @@ namespace SEALMobile.Views
 
             var responseMessage = await client.PostAsync(uri, content);
 
+            Console.WriteLine(responseMessage.StatusCode.ToString());
+
         }
 
         private EdgeReq prepareEdgeREQ()
@@ -83,26 +84,16 @@ namespace SEALMobile.Views
 
             EdgeDevice device = model.device;
 
-            var tmp = new NetpieDevice();
-            tmp.client_id = device.deviceid;
-            tmp.secret = device.devicesecret;
-            tmp.token = device.devicetoken;
+            edgeReq.netpieDevice = new NetpieDevice
+            {
+                client_id = device.deviceid,
+                secret = device.devicesecret,
+                token = device.devicetoken
+            };
 
-            edgeReq.netpieDevice = tmp;
-
-            Console.WriteLine(edgeReq.context.ToString());
+            //Console.WriteLine(edgeReq.context.ToString());
             return edgeReq;
         }
-
-
-        void test()
-        {
-            var x = prepareEdgeREQ();
-
-
-        }
-
-
     }
 
     public class Host

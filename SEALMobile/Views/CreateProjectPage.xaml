@@ -2,9 +2,10 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="SEALMobile.Views.CreateProjectPage">
+    x:Class="SEALMobile.Views.CreateProjectPage"
+    NavigationPage.BackButtonTitle="Back">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand">
+        <StackLayout HorizontalOptions="CenterAndExpand" Margin="15">
             <StackLayout Orientation="Horizontal">
                 <Label Text="Project name:"/>
                 <Entry x:Name="name_entry" WidthRequest="150" />

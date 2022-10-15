@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SEALMobile.MyPage4"
+    Title="DASHBOARD MOCK"
+    >
+    <ContentPage.Content>
+        <StackLayout >
+            <Label HorizontalTextAlignment="Center" x:Name="name_label" Text=""></Label>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Entry x:Name="entry" WidthRequest="120" Placeholder="text2webview" ></Entry>
+                <Button Text="Send" Clicked="Handle_Hello" />
+                <Button Text="Decrypt" Clicked="Handle_Decrypt" />
+                <Button Text="Refresh" Clicked="Handle_Refresh" />
+            </StackLayout>
+            <!-- WebView needs to be given height and width request within layouts to render. -->
+            <WebView HorizontalOptions="Center" x:Name="webView" HeightRequest="200" WidthRequest="250" BackgroundColor="AliceBlue"  />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

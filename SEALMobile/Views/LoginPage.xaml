@@ -5,12 +5,14 @@
     x:Class="SEALMobile.Views.LoginPage"
     >
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout>
+        <StackLayout Margin="15">
+            <StackLayout VerticalOptions="Center">
                 <Entry x:Name="user_value" Placeholder="User" ></Entry>
                 <Entry x:Name="pass_value" Placeholder="Password" IsPassword="True"></Entry>
                 <Label x:Name="login_label" Text=""></Label>
-                <Button Text="Login" Clicked="Handle_Login"/>
+                <Button HorizontalOptions="Center"
+                        HeightRequest="50" WidthRequest="180" Margin="20"
+                     BackgroundColor="LightGray" Text="Login" Clicked="Handle_Login"/>
 
             </StackLayout>
 

@@ -49,6 +49,18 @@
               "target": "Package",
               "version": "[5.1.0, )"
             },
+            "MQTTnet": {
+              "target": "Package",
+              "version": "[4.1.1.318, )"
+            },
+            "MQTTnet.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.1.318, )"
+            },
+            "MQTTnet.Extensions.ManagedClient": {
+              "target": "Package",
+              "version": "[4.1.1.318, )"
+            },
             "Microsoft.Research.SEALNet": {
               "target": "Package",
               "version": "[4.0.0, )"
@@ -63,7 +75,7 @@
             },
             "Xamarin.CommunityToolkit": {
               "target": "Package",
-              "version": "[2.0.4, )"
+              "version": "[2.0.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -132,6 +144,18 @@
               "target": "Package",
               "version": "[5.1.0, )"
             },
+            "MQTTnet": {
+              "target": "Package",
+              "version": "[4.1.1.318, )"
+            },
+            "MQTTnet.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.1.318, )"
+            },
+            "MQTTnet.Extensions.ManagedClient": {
+              "target": "Package",
+              "version": "[4.1.1.318, )"
+            },
             "Microsoft.Research.SEALNet": {
               "target": "Package",
               "version": "[4.0.0, )"
@@ -152,7 +176,7 @@
             },
             "Xamarin.CommunityToolkit": {
               "target": "Package",
-              "version": "[2.0.4, )"
+              "version": "[2.0.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

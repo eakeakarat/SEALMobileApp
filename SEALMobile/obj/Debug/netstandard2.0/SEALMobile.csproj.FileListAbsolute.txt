@@ -43,3 +43,4 @@
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/MyScanner.xaml.g.cs
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/CreateProjectPage.xaml.g.cs
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/CreateEdgePage.xaml.g.cs
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/DashboardPage.xaml.g.cs

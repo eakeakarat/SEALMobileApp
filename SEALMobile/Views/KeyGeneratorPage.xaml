@@ -3,15 +3,15 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    x:Class="SEALMobile.Views.KeyGeneratorPage">
+    x:Class="SEALMobile.Views.KeyGeneratorPage"
+    NavigationPage.BackButtonTitle="Back">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center">
+        <StackLayout HorizontalOptions="Center" Margin="15">
 
             <!--<Picker BackgroundColor="DarkBlue"
                     ios:Picker.UpdateMode="WhenFinished"/>-->
             <Label Text="Choose context size:" FontSize="Small"/>
-            <Picker BackgroundColor="Beige"
-                    Title="Context Size"
+            <Picker Title="Context Size"
                     x:Name="Dropdown"
                     WidthRequest="200" 
                     ItemsSource="{Binding SizeList}"

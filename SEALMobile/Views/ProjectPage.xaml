@@ -2,9 +2,10 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="SEALMobile.Views.ProjectPage">
+    x:Class="SEALMobile.Views.ProjectPage"
+    NavigationPage.BackButtonTitle="Back">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="15">
             <Button  Text="EDGE device list"
                      Clicked="Handle_EdgeList"
                      HorizontalOptions="Center" 
