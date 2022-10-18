@@ -52,15 +52,18 @@ namespace SEALMobile.Views
             var result = await Navigation.ShowPopupAsync(new MyScanner());
             string text = result.ToString();
             qrRes = text;
+            //qrRes = "{ \"hostname\":\"eak\",\"hostIP\":\"http://localhost:9000\",\"endPoint\":\"/import/contextAndPublicKey\",\"oneTimePassword\":\"gogeEaTNdTeUYT3Wan5lSSTe8bRkUulFQ7RhsZCX8yWzl7mAwt\"} ";
+
             JObject hostJson = JObject.Parse(qrRes);
             Host host = hostJson.ToObject<Host>();
 
             string uri = host.hostIP + host.endpoint;
+            Console.WriteLine(uri);
 
             HttpClient client = new HttpClient();
 
             var edgeReq = prepareEdgeREQ();
-            edgeReq.oneTimepassword = host.oneTimePassword;
+            edgeReq.oneTimePassword = host.oneTimePassword;
 
             dataPacking dataPacking = new dataPacking { data = edgeReq };
             string jsonPacking = JsonConvert.SerializeObject(dataPacking, Formatting.Indented);
@@ -70,6 +73,8 @@ namespace SEALMobile.Views
 
             Console.WriteLine(responseMessage.StatusCode.ToString());
 
+            await Navigation.PopAsync();
+
         }
 
         private EdgeReq prepareEdgeREQ()
@@ -78,9 +83,13 @@ namespace SEALMobile.Views
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var cotPath = Path.Combine(documents, projectid, "context.txt");
             var pkPath = Path.Combine(documents, projectid, "publicKey.txt");
+            var scalePath = Path.Combine(documents, projectid, "scale.txt");
+            var typePath = Path.Combine(documents, projectid, "type.txt");
 
-            edgeReq.context = File.ReadAllText(cotPath);
             edgeReq.publicKey = File.ReadAllText(pkPath);
+            edgeReq.context = File.ReadAllText(cotPath);
+            edgeReq.contextType = File.ReadAllText(typePath);
+            edgeReq.scale = File.ReadAllText(scalePath);
 
             EdgeDevice device = model.device;
 
@@ -106,9 +115,11 @@ namespace SEALMobile.Views
 
     public class EdgeReq
     {
-        public string oneTimepassword { get; set; }
+        public string oneTimePassword { get; set; }
         public string publicKey { get; set; }
         public string context { get; set; }
+        public string contextType { get; set; }
+        public string scale { get; set; }
         public NetpieDevice netpieDevice { get; set; }
 
     }

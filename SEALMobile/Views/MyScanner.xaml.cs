@@ -38,7 +38,8 @@ namespace SEALMobile.Views
                 {
                     label.Text = "Scanning Complete";
                     label_scan.IsVisible = true;
-                    label_scan.Text = result.Text;
+                    //label_scan.Text = result.Text;
+                    label_scan.Text = "Complete Close Scanning";
                     scanner.IsScanning = false;
                     scanner.IsVisible = false;
                 }

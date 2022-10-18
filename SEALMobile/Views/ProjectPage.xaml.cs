@@ -25,7 +25,7 @@ namespace SEALMobile.Views
         }
         public void Handle_Dashboards(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new DashboardsPage(), true);
+            Navigation.PushAsync(new DashboardPage(project), true);
         }
     }
 }

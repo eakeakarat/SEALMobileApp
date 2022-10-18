@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using MQTTnet;
@@ -21,8 +22,20 @@ namespace SEALMobile.Models
                 .WithCredentials("cyblion", "password")
                 .WithCleanSession()
                 .Build();
-            
+            mqttClient.ApplicationMessageReceivedAsync += e =>
+            {
+                Console.WriteLine("Received application message.");
+                var msg = e.ApplicationMessage.Payload;
+                var stmag = Encoding.UTF8.GetString(msg);
+                
+                Console.WriteLine(stmag);
 
+
+
+                //return decode(stmag);
+
+                return Task.CompletedTask;
+            };
 
         }
         public bool isConnect()
@@ -32,34 +45,23 @@ namespace SEALMobile.Models
         public async Task<bool> Connected()
         {
             await mqttClient.ConnectAsync(mqttClientOptions, CancellationToken.None);
-
-
-            Console.WriteLine(mqttClient.IsConnected.ToString());
-
             return mqttClient.IsConnected;
-
         }
 
         public async void Subscribe()
         {
 
-            var mqttSubscribeOptions = mqttFactory.CreateSubscribeOptionsBuilder()
-                .WithTopicFilter(f => { f.WithTopic("@msg/computed"); })
+            await mqttClient.SubscribeAsync(new MqttTopicFilterBuilder().WithTopic("@msg/computed").Build());
+        }
+
+        private async void decode(string k)
+        {
+            var applicationMessage = new MqttApplicationMessageBuilder()
+                .WithTopic("samples/temperature/living_room")
+                .WithPayload("19.5")
                 .Build();
 
-            var response = await mqttClient.SubscribeAsync(mqttSubscribeOptions, CancellationToken.None);
-
-            var k = await mqttClient.SubscribeAsync("@msg/computed");
-
-            while (response.ReasonString == "")
-            {
-                response = await mqttClient.SubscribeAsync(mqttSubscribeOptions, CancellationToken.None);
-
-            }
-
-            Console.WriteLine("MQTT client subscribed to topic.");
-            Console.WriteLine(response.ToString());
-            Console.WriteLine(k.ReasonString);
+            await mqttClient.PublishAsync(applicationMessage, CancellationToken.None);
 
         }
 

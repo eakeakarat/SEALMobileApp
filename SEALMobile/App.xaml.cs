@@ -13,9 +13,9 @@ namespace SEALMobile
             DevExpress.XamarinForms.Charts.Initializer.Init();
 
             InitializeComponent();
-            MainPage = new NavigationPage(new DashboardPage());
+            //MainPage = new NavigationPage(new DashboardPage());
 
-            //MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new LoginPage());
             //MainPage = new NavigationPage(new UserHomePage());
             //MainPage = new NavigationPage(new ProjectPage());
             //MainPage = new NavigationPage(new CreateProjectPage());
