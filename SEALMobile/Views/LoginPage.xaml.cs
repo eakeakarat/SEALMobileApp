@@ -33,8 +33,8 @@ namespace SEALMobile.Views
         public LoginPage()
         {
             InitializeComponent();
-            user_value.Text = "nataset.t@ku.th";
-            pass_value.Text = "121bd4a9";
+            user_value.Text = "";
+            pass_value.Text = "";
 
             documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             directoryname = Path.Combine(documents, dir);

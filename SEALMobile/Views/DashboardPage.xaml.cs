@@ -54,7 +54,7 @@ namespace SEALMobile.Views
 
                 return Task.CompletedTask;
             };
-            test();
+            //test();
             connect();
         }
 

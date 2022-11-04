@@ -17,7 +17,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate >
                         <TextCell Text="{Binding alias}"
-                              Detail="{Binding deviceid}"/>
+                              Detail="{Binding description}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
