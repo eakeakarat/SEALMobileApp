@@ -33,8 +33,12 @@ namespace SEALMobile.Views
         public LoginPage()
         {
             InitializeComponent();
-            user_value.Text = "";
-            pass_value.Text = "";
+            //user_value.Text = "cpsSECteam@gmail.com";
+            //pass_value.Text = "1q2w3e4r#Cipherflow";
+
+            user_value.Text = "eakarat.sak@ku.th";
+            pass_value.Text = "5546";
+
 
             documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             directoryname = Path.Combine(documents, dir);
@@ -61,15 +65,33 @@ namespace SEALMobile.Views
             try
             {
                 var graphQLResponse = await graphQLHttp.SendQueryAsync<Data>(loginTokenRequest);
-                var res = graphQLResponse.Data.login;
-                var path = Path.Combine(documents, dir, "access_token.txt");
-                File.WriteAllText(path, res.access_token);
-                var home = new UserHomePage();
-                await Navigation.PushAsync(home, true);
+                var res = graphQLResponse;
+
+                if (res.Data.login != null)
+                {
+                    //Console.WriteLine("PASS");
+                    Console.WriteLine("RES " + res.Data.login.access_token);
+                    var path = Path.Combine(documents, dir, "access_token.txt");
+                    File.WriteAllText(path, res.Data.login.access_token);
+                    var home = new UserHomePage();
+                    await Navigation.PushAsync(home, true);
+
+                }
+                else
+                {
+                    //Console.WriteLine("ERROR");
+                    var err = res.Errors[0];
+                    Console.WriteLine("ERR " + err.Message);
+                    await DisplayAlert("ERROR", err.Message, "close");
+                }
+
+
+
             }
-            catch
+            catch (Exception ex)
             {
-                await DisplayAlert("Alert", "invalid username/password", "Close");
+                Console.WriteLine("CATCH " + ex.Message);
+                await DisplayAlert("Catch", ex.Message, "Close");
             }
 
 

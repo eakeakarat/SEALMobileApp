@@ -23,6 +23,11 @@ namespace SEALMobile.Views
         {
             if (name_entry.Text != null || name_entry.Text != "")
             {
+                if (desc_entry.Text == null)
+                {
+                    desc_entry.Text = "";
+                }
+
                 var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 var path = Path.Combine(documents, "UserInfo", "access_token.txt");
                 var token = File.ReadAllText(path);
@@ -30,7 +35,7 @@ namespace SEALMobile.Views
                 var graphQLHttp = new GraphQLHttpClient("http://fhe.netpie.io:30010/", new NewtonsoftJsonSerializer());
                 graphQLHttp.HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                var createedgeREQ = new GraphQLRequest
+                var createEdgeREQ = new GraphQLRequest
                 {
                     Query = @"mutation ($pid:String!, $dname:String!, $ddes:String!) { 
                                 createDevice(projectid: $pid, deviceinfo:{alias: $dname, description: $ddes}) {
@@ -48,14 +53,27 @@ namespace SEALMobile.Views
 
                 try
                 {
-                    var graphQLResponse = await graphQLHttp.SendQueryAsync<dataCreateEdge>(createedgeREQ);
-                    var res = graphQLResponse.Data.createDevice;
-                    Edge edge = res;
-                    await Navigation.PopAsync();
+                    var graphQLResponse = await graphQLHttp.SendQueryAsync<dataCreateEdge>(createEdgeREQ);
+                    var res = graphQLResponse;
+
+                    if (res.Data.createDevice != null)
+                    {
+                        //Console.WriteLine("RES ");
+                        //Console.WriteLine("RES " + res.Data.createDevice.deviceid);
+                        await DisplayAlert("Device Created", "Device: " + res.Data.createDevice.alias + "\nID: " + res.Data.createDevice.deviceid, "Close");
+                        await Navigation.PopAsync();
+                    }
+                    else
+                    {
+                        //Console.WriteLine("ERR ");
+                        //Console.WriteLine("ERR " + res.Errors[0].Message);
+                        await DisplayAlert("Error!", "Can not create device cause " + res.Errors[0].Message, "Close");
+
+                    }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    await DisplayAlert("Alert", "Can't create project", "Close");
+                    await DisplayAlert("Catch", ex.Message, "Close");
                 }
 
             }

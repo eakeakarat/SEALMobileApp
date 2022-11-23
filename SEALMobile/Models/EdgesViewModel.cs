@@ -62,6 +62,18 @@ namespace SEALMobile.Models
             }
             return edge;
         }
+        public Edge getCloud()
+        {
+            Edge edge = new Edge();
+            foreach (Edge e in edgesList)
+            {
+                if (e.alias == "FHE-CLOUD")
+                {
+                    edge = e;
+                }
+            }
+            return edge;
+        }
     }
 
     public class dataEdge
@@ -74,5 +86,6 @@ namespace SEALMobile.Models
         public string alias { get; set; }
         public string deviceid { get; set; }
         public string description { get; set; }
+        public string tag { get; set; }
     }
 }

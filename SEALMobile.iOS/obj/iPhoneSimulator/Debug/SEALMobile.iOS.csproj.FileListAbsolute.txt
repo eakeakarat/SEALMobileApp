@@ -68,9 +68,53 @@
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/libsealc.dylib
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/SEALMobile.iOS.exe
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/SEALMobile.iOS.pdb
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.Xamarin.iOS.Charts.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.XamarinForms.Charts.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.XamarinForms.Charts.iOS.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.XamarinForms.Core.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.XamarinForms.Core.iOS.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Client.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Client.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Client.Abstractions.Websocket.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Client.Serializer.Newtonsoft.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Primitives.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Authentication.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Authorization.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Authorization.Policy.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Connections.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Hosting.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Connections.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Connections.Common.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Extensions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Features.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Routing.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Routing.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.WebSockets.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.WebUtilities.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Hosting.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.ObjectPool.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Options.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Primitives.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Net.Http.Headers.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/SEALNet.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/MQTTnet.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/MQTTnet.AspNetCore.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/MQTTnet.Extensions.ManagedClient.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.IO.Pipelines.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.Net.Http.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.Net.WebSockets.WebSocketProtocol.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.Reactive.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.Runtime.CompilerServices.Unsafe.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.Text.Encodings.Web.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Xamarin.CommunityToolkit.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
@@ -114,63 +158,13 @@
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/SEALMobile.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/SEALMobile.pdb
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.csproj.AssemblyReference.cache
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.csproj.CoreCompileInputs.cache
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.csproj.CopyComplete
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.exe
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.pdb
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/ZXing.Net.Mobile.Core.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/ZXingNetMobile.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/zxing.portable.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/ZXing.Net.Mobile.Forms.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/ZXing.Net.Mobile.Forms.iOS.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Xamarin.CommunityToolkit.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.Xamarin.iOS.Charts.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.XamarinForms.Charts.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.XamarinForms.Charts.iOS.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.XamarinForms.Core.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/DevExpress.XamarinForms.Core.iOS.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/Resources/style.css.g.cs
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Client.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Client.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Client.Abstractions.Websocket.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Client.Serializer.Newtonsoft.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/GraphQL.Primitives.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.Reactive.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/MQTTnet.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Authentication.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Authorization.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Authorization.Policy.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Connections.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Hosting.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Connections.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Connections.Common.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Extensions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Http.Features.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Routing.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.Routing.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.WebSockets.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.AspNetCore.WebUtilities.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Configuration.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.DependencyInjection.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.FileProviders.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Hosting.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Logging.Abstractions.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.ObjectPool.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Options.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Extensions.Primitives.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Microsoft.Net.Http.Headers.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/MQTTnet.AspNetCore.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/MQTTnet.Extensions.ManagedClient.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.IO.Pipelines.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.Net.WebSockets.WebSocketProtocol.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.Runtime.CompilerServices.Unsafe.dll
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/System.Text.Encodings.Web.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/SEALMobile.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/SEALMobile.pdb
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/actool/_PartialAppManifest.items
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/actool/_BundleResourceWithLogicalName.items
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/actool/_ProcessedImageAssetsPath.items
@@ -182,3 +176,16 @@
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/_ProcessedBundleResourcesPath.items
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/_ProcessedContentPath.items
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/Resources/style.css.g.cs
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.csproj.CoreCompileInputs.cache
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.csproj.CopyComplete
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.exe
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.pdb
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/docs/public/images/gray.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.csproj.AssemblyReference.cache
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/dropdown-arrow.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-blackboard.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-halflings-white.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-halflings.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-log-in.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-log-out.png

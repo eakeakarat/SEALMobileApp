@@ -22,7 +22,8 @@
 
 
             <Label x:Name="detail_label"/>
-            <Button Text="Pair EDGE" Clicked="Button_Clicked" />
+            <Button Text="Pair EDGE" Clicked="Pair_Button_Clicked" />
+            <Button Text="DELETE EDGE" Clicked="Delete_Button_Clicked" />
 
 
         </StackLayout>

@@ -31,9 +31,6 @@
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/ref/SEALMobile.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/SEALMobile.pdb
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/MyScanner.xaml.g.cs
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/NotUse/MyPage3.xaml.g.cs
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/NotUse/MyPage4.xaml.g.cs
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/NotUse/MyPage2.xaml.g.cs
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/EdgesListPage.xaml.g.cs
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/KeyGeneratorPage.xaml.g.cs
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/LoginPage.xaml.g.cs

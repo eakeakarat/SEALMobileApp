@@ -39,7 +39,6 @@
     <None Remove="Xamarin.CommunityToolkit" />
     <None Remove="Syncfusion.Xamarin.SfChart" />
     <None Remove="DevExpress.XamarinForms.Charts" />
-    <None Remove="NotUse\" />
     <None Remove="GraphQL.Client" />
     <None Remove="GraphQL.Client.Serializer.Newtonsoft" />
     <None Remove="MQTTnet" />
@@ -51,7 +50,6 @@
     <Folder Include="Models\" />
     <Folder Include="Views\" />
     <Folder Include="Services\" />
-    <Folder Include="NotUse\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MyScanner.xaml.cs">

@@ -40,7 +40,6 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.10.0.5/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.10.0.5/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Debug.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.10.0.5/lib/mono/Xamarin.iOS/Facades/System.ObjectModel.dll
-/Users/eakarat/.nuget/packages/newtonsoft.json/13.0.1/lib/netstandard2.0/Newtonsoft.Json.dll
 /Users/eakarat/.nuget/packages/graphql.primitives/5.1.0/lib/netstandard2.0/GraphQL.Primitives.dll
 /Users/eakarat/.nuget/packages/graphql.client/5.1.0/lib/netstandard2.0/GraphQL.Client.dll
 /Users/eakarat/.nuget/packages/graphql.client.abstractions/5.1.0/lib/netstandard2.0/GraphQL.Client.Abstractions.dll
@@ -49,6 +48,7 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.10.0.5/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.Extensions.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.10.0.5/lib/mono/Xamarin.iOS/Facades/System.Runtime.InteropServices.WindowsRuntime.dll
 /Users/eakarat/.nuget/packages/mqttnet/4.1.1.318/lib/netstandard2.1/MQTTnet.dll
+/Users/eakarat/.nuget/packages/newtonsoft.json/13.0.1/lib/netstandard2.0/Newtonsoft.Json.dll
 /Users/eakarat/.nuget/packages/devexpress.xamarinforms.charts/22.1.5/lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll
 /Users/eakarat/.nuget/packages/devexpress.xamarinforms.core/22.1.5/lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll
 /Users/eakarat/.nuget/packages/graphql.client.serializer.newtonsoft/5.1.0/lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll

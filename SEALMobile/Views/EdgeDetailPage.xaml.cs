@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
+using GraphQL;
+using GraphQL.Client.Http;
+using GraphQL.Client.Serializer.Newtonsoft;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SEALMobile.Models;
@@ -13,24 +17,10 @@ namespace SEALMobile.Views
 {
     public partial class EdgeDetailPage : ContentPage
     {
-        //        {
-        //oneTimepassword: ส่งค่าเดิมกลับไปเลยครับ,
-        //publicKey: pk base64,
-        //context : context Base64
-        //netpieDevice: {
-        //          client_id: cilent_id ของ edge,
-        //          token: token ของ edge,
-        //          secret: secret ของ edge
-        //    }
-        //}
-
         string qrRes;
         string projectid;
         Edge edge;
         EgdeDetailViewModel model;
-
-        NetpieDevice netpieDevice;
-        EdgeReq edgeReq;
 
 
         public EdgeDetailPage(Edge e, string id)
@@ -42,12 +32,9 @@ namespace SEALMobile.Views
             detail_label.Text = edge.description;
 
             model = new EgdeDetailViewModel(edge);
-
-
-
         }
 
-        async void Button_Clicked(System.Object sender, System.EventArgs e)
+        async void Pair_Button_Clicked(System.Object sender, System.EventArgs e)
         {
             var result = await Navigation.ShowPopupAsync(new MyScanner());
             string text = result.ToString();
@@ -103,6 +90,69 @@ namespace SEALMobile.Views
             //Console.WriteLine(edgeReq.context.ToString());
             return edgeReq;
         }
+
+        async void Delete_Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            var answer = await DisplayAlert("Delete Device ?", "Device: " + edge.alias + "\nID: " + edge.deviceid, "YES", "NO");
+
+            if (answer)
+            {
+                var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                var path = Path.Combine(documents, "UserInfo", "access_token.txt");
+                var token = File.ReadAllText(path);
+
+                var graphQLHttp = new GraphQLHttpClient("http://fhe.netpie.io:30010/", new NewtonsoftJsonSerializer());
+                graphQLHttp.HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                var deleteEdgeREQ = new GraphQLRequest
+                {
+                    Query = @"mutation ($did:String!) { 
+                                deleteDevice(deviceid: $did) {
+                                    alias,deviceid,description
+                                } 
+                            }",
+                    Variables = new
+                    {
+                        did = edge.deviceid
+                    }
+                };
+
+                try
+                {
+                    var graphQLResponse = await graphQLHttp.SendQueryAsync<dataDeleteEdge>(deleteEdgeREQ);
+                    var res = graphQLResponse;
+
+                    if (res.Data != null)
+                    {
+                        //Console.WriteLine("RES ");
+                        Console.WriteLine("RES " + res.Data.deleteDevice.alias);
+                        await DisplayAlert("Already Delete", "Device: " + res.Data.deleteDevice.alias + "\nID: " + res.Data.deleteDevice.deviceid, "Close");
+                        await Navigation.PopAsync();
+                    }
+                    else
+                    {
+                        //Console.WriteLine("ERR ");
+                        Console.WriteLine("ERR " + res.Errors[0].Message);
+                        await DisplayAlert("Error!", "Can not delete device cause " + res.Errors[0].Message, "Close");
+
+                    }
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Catch", ex.Message, "Close");
+                }
+            }
+
+        }
+
+    }
+
+    public class dataDeleteEdge
+    {
+        public Edge deleteDevice { get; set; }
     }
 
     public class Host
@@ -130,6 +180,7 @@ namespace SEALMobile.Views
         public string[] token { get; set; }
         public string secret { get; set; }
     }
+
     public class dataPacking
     {
         public EdgeReq data { get; set; }

@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Net;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Text;
 using MQTTnet;
 using MQTTnet.Client;
 using SEALMobile.Models;
-
 
 using Xamarin.Forms;
 
 namespace SEALMobile.Views
 {
+    public interface IBaseUrl { string Get(); }
+
+
+
     public partial class DashboardPage : ContentPage
     {
         Project project;
@@ -28,71 +28,43 @@ namespace SEALMobile.Views
             project = p;
             seal = new SEALENY(project);
 
-            var mqttFactory = new MqttFactory();
 
-            mqttClient = mqttFactory.CreateMqttClient();
-            mqttClientOptions = new MqttClientOptionsBuilder()
-                .WithTcpServer("mqtt.ntscloud.cc", 31883)
-                .WithCredentials("cyblion", "password")
-                .WithCleanSession()
-                .Build();
-
-            mqttClient.ApplicationMessageReceivedAsync += e =>
-            {
-                Console.WriteLine("Received application message.");
-                var msg = e.ApplicationMessage.Payload;
-                var stmag = Encoding.UTF8.GetString(msg);
-                Console.WriteLine(stmag);
-
-                var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                var path = Path.Combine(documents, "cipher(recieve).txt");
-
-                File.WriteAllText(path, stmag);
-
-                publishing(seal.decryptText(stmag));
-                //seal.decryptText(stmag);
-
-                return Task.CompletedTask;
-            };
-            //test();
-            connect();
-        }
-
-        async void connect()
-        {
-
-            await mqttClient.ConnectAsync(mqttClientOptions, CancellationToken.None);
-
-            if (mqttClient.IsConnected)
-            {
-                Console.WriteLine("Connect");
-                //var k = mqttClient.SubscribeAsync("@msg/computed");
-                await mqttClient.SubscribeAsync(new MqttTopicFilterBuilder().WithTopic("@msg/computed").Build());
-            }
-        }
-
-        async void publishing(string text)
-        {
-            //await mqttClient.ConnectAsync(mqttClientOptions, CancellationToken.None);
-
-            var applicationMessage = new MqttApplicationMessageBuilder()
-                .WithTopic("@msg/decrypted")
-                .WithPayload(text)
-                .Build();
-            await mqttClient.PublishAsync(applicationMessage, CancellationToken.None);
-
-            //await mqttClient.DisconnectAsync();
-        }
-
-        private void test()
-        {
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            var path = Path.Combine(documents, "cipher.txt");
+            var directoryname = Path.Combine(documents, project.projectid);
+            var cloudPath = Path.Combine(directoryname, "Dashboard.txt");
 
-            File.WriteAllText(path,seal.encryptText());
+            string token = File.ReadAllText(cloudPath);
+
+            //Web Session
+            WebView web = new WebView();
+            var urlSource = new UrlWebViewSource();
+            string baseUrl = DependencyService.Get<IBaseUrl>().Get();
+
+            token = "3a7bac62-84cd-4245-8c34- 932205f4ea3e:8WeNXJam3TWHTtqHWuUcbq1oxT3gpcdd";
+            string filePathUrl = Path.Combine(baseUrl, "Freeboard", "index.html#" + token);
+
+            //Console.WriteLine(baseUrl);
+            //Console.WriteLine(filePathUrl);
+
+            urlSource.Url = filePathUrl;
+            web.Source = urlSource;
+            Content = web;
 
 
         }
+
+        public string DecryptData(string s)
+        {
+            Console.WriteLine("DecryptData FN");
+
+            //string result = seal.decryptText(s);
+            //return result;
+
+            return "OK";
+
+        }
+
+
         
 
     }

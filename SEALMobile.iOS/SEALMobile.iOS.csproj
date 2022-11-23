@@ -175,9 +175,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+    <Folder Include="Resources\Freeboard\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\local.html" />
+    <BundleResource Include="Resources\Freeboard\*\*" />
+    <BundleResource Include="Resources\Freeboard\*\*\*" />
+    <BundleResource Include="Resources\Freeboard\*\*\*\*" />
+    <BundleResource Include="Resources\Freeboard\Gruntfile.js" />
+    <BundleResource Include="Resources\Freeboard\index.html" />
+    <BundleResource Include="Resources\Freeboard\.DS_Store" />
+    <BundleResource Include="Resources\Freeboard\LICENSE" />
+    <BundleResource Include="Resources\Freeboard\Dockerfile" />
+    <BundleResource Include="Resources\Freeboard\README.md" />
+    <BundleResource Include="Resources\Freeboard\.gitignore" />
+    <BundleResource Include="Resources\Freeboard\package.json" />
+    <BundleResource Include="Resources\Freeboard\docker-compose.yml" />
+    <BundleResource Include="Resources\Freeboard\index-dev.html" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\style.css" />

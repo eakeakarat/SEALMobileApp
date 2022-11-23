@@ -43,6 +43,10 @@ namespace SEALMobile.Models
             Console.WriteLine(device.deviceid);
 
         }
+        public EdgeDevice GetEdgeDevice()
+        {
+            return device;
+        }
     }
 
     public class dataDevice
