@@ -1,13 +1,25 @@
 function cyblion_decrypt(ciphertext) {
-	let x = parseFloat(ciphertext) + 10.2;
-	// let plaintext = ciphertext;
-	let plaintext = x;
+    
+    let url = 'http://localhost:8080/api/cipher';
 
-	console.log(typeof(ciphertext))
-	console.log("plaintext:  " + plaintext);
-	console.log("cipher:  " + ciphertext);
+    let res = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'text/html',
+        },
+        body: ciphertext,
+    });
 
-	//window.location = 'myapp://custom?args=COMPLETE';
+    if (res.ok) {
+        let plaintext = await res.text();
 
-	return plaintext;
+        console.log(res);
+        console.log(plaintext);
+
+        return plaintext;
+
+    } else {
+        return `HTTP error: ${res.status}`;
+    }
+
 }
