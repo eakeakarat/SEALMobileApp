@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "beFY+si+L7QZ0cPQCxEo0F4G77tuSCAlFgKlfAy7dFSm5gnHCXTEbqVp/b5TAOArWivdGHJwIJm+3VhNJ5TFGw==",
+  "dgSpecHash": "YOgTfAqAbI0QlxKGVpIkYIl1rQatAduBXfVR0k61liMxb4q/bXAVH6IXpn/+OyFdpTfjujnsU2DxPIO4JokBFA==",
   "success": true,
   "projectFilePath": "/Users/eakarat/Projects/xamarin-seal-main/SEALMobile/SEALMobile.csproj",
   "expectedPackageFiles": [
     "/Users/eakarat/.nuget/packages/devexpress.xamarinforms.charts/22.1.5/devexpress.xamarinforms.charts.22.1.5.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/devexpress.xamarinforms.core/22.1.5/devexpress.xamarinforms.core.22.1.5.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/embedio/3.5.2/embedio.3.5.2.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/graphql.client/5.1.0/graphql.client.5.1.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/graphql.client.abstractions/5.1.0/graphql.client.abstractions.5.1.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/graphql.client.abstractions.websocket/5.1.0/graphql.client.abstractions.websocket.5.1.0.nupkg.sha512",
@@ -105,6 +106,7 @@
     "/Users/eakarat/.nuget/packages/system.threading/4.3.0/system.threading.4.3.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/unosquare.swan.lite/3.1.0/unosquare.swan.lite.3.1.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/xamarin.essentials/1.7.3/xamarin.essentials.1.7.3.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/xamarin.forms/5.0.0.2515/xamarin.forms.5.0.0.2515.nupkg.sha512",

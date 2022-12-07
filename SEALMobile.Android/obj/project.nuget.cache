@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cLsnF/3rsivdt66b5DN4X13zAmo8a8u+2dyWth03WhTYsjI1rBmgUWNaK+uGGaA6bBtzFxUiOzd94gSogSlPBQ==",
+  "dgSpecHash": "Q8oLQ35+sa4osJ0/1x2hIdtZWy31iHrIzaQim+QE0DFRrUeuQ2cpGNblN1a2isEL76NvPWmsJ9nXDyTQH47cTg==",
   "success": true,
   "projectFilePath": "/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.Android/SEALMobile.Android.csproj",
   "expectedPackageFiles": [
     "/Users/eakarat/.nuget/packages/devexpress.xamarinforms.charts/22.1.5/devexpress.xamarinforms.charts.22.1.5.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/devexpress.xamarinforms.core/22.1.5/devexpress.xamarinforms.core.22.1.5.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/embedio/3.5.2/embedio.3.5.2.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/fastandroidcamera/2.0.0/fastandroidcamera.2.0.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/graphql.client/5.1.0/graphql.client.5.1.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/graphql.client.abstractions/5.1.0/graphql.client.abstractions.5.1.0.nupkg.sha512",
@@ -55,6 +56,7 @@
     "/Users/eakarat/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "/Users/eakarat/.nuget/packages/unosquare.swan.lite/3.1.0/unosquare.swan.lite.3.1.0.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/xamarin.android.support.annotations/25.4.0.2/xamarin.android.support.annotations.25.4.0.2.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/xamarin.android.support.compat/25.4.0.2/xamarin.android.support.compat.25.4.0.2.nupkg.sha512",
     "/Users/eakarat/.nuget/packages/xamarin.android.support.core.ui/25.4.0.2/xamarin.android.support.core.ui.25.4.0.2.nupkg.sha512",

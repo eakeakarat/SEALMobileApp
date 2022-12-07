@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SEALMobile.Views.CloudDetailPage"
+    NavigationPage.BackButtonTitle="Back">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" Margin="15">
+            <Label Text="Edge Detail" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Online Status: "/>
+                <Label x:Name="stat_label" Text="Offline"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Sync Status: "/>
+                <Label x:Name="sync_label" Text="Unsync"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Description: "/>
+                <Label x:Name="desc_label" Text=""/>
+            </StackLayout>
+            
+
+            <Label x:Name="detail_label"/>
+            <Button Text="SEND KEY" Clicked="SendKey_Button_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

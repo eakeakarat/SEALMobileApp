@@ -175,17 +175,20 @@
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/coremlc/_ProcessedCoreMLModelsPath.items
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/_ProcessedBundleResourcesPath.items
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/_ProcessedContentPath.items
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/freeboard/img/dropdown-arrow.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/freeboard/img/glyphicons-blackboard.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/freeboard/img/glyphicons-halflings-white.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/freeboard/img/glyphicons-halflings.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/freeboard/img/glyphicons-log-in.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/freeboard/img/glyphicons-log-out.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/freeboard/docs/public/images/gray.png
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/Resources/style.css.g.cs
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.csproj.CoreCompileInputs.cache
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.csproj.CopyComplete
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.exe
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.pdb
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/docs/public/images/gray.png
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/SEALMobile.iOS.csproj.AssemblyReference.cache
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/dropdown-arrow.png
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-blackboard.png
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-halflings-white.png
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-halflings.png
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-log-in.png
-/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.5/optimized/Freeboard/img/glyphicons-log-out.png
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/EmbedIO.dll
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/EmbedIO.pdb
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile.iOS/bin/iPhoneSimulator/Debug/Swan.Lite.dll

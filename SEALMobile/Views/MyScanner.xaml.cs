@@ -25,6 +25,7 @@ namespace SEALMobile.Views
             }
             else
             {
+                scanner.IsScanning = false;
                 Dismiss("closed");
             }
 

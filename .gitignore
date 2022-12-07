@@ -1,2 +1,4 @@
 SEALMobile.iOS/obj/iPhone/Debug/device-builds/*
 SEALMobile.iOS/obj/iPhone/*
+SEALMobile.iOS/bin/iPhone/*
+SEALMobile.iOS/bin/iPhoneSimulator/*

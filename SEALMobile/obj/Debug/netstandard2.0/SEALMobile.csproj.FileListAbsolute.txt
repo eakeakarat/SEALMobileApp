@@ -41,3 +41,6 @@
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/CreateProjectPage.xaml.g.cs
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/CreateEdgePage.xaml.g.cs
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/DashboardPage.xaml.g.cs
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/html/freeboard/css/freeboard.css.g.cs
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/html/freeboard/css/freeboard.min.css.g.cs
+/Users/eakarat/Projects/xamarin-seal-main/SEALMobile/obj/Debug/netstandard2.0/Views/CloudDetailPage.xaml.g.cs

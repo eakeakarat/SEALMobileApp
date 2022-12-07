@@ -29,7 +29,24 @@ namespace SEALMobile.Views
         void ListView_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
             Edge edge = (Edge)EdgeListView.SelectedItem;
-            Navigation.PushAsync(new EdgeDetailPage(edge,project.projectid), true);
+            bool isCloud = false;
+            foreach (string h in edge.hashtag)
+            {
+                if (h == "cloud")
+                {
+                    isCloud = true;
+                    break;
+                }
+            }
+
+            if (isCloud)
+            {
+                Navigation.PushAsync(new CloudDetailPage(edge, project.projectid), true);
+            }
+            else
+            {
+                Navigation.PushAsync(new EdgeDetailPage(edge, project.projectid), true);
+            }
 
         }
 

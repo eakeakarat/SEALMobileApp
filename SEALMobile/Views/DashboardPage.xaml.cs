@@ -7,6 +7,8 @@ using MQTTnet.Client;
 using SEALMobile.Models;
 
 using Xamarin.Forms;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace SEALMobile.Views
 {
@@ -26,46 +28,46 @@ namespace SEALMobile.Views
         {
             InitializeComponent();
             project = p;
-            seal = new SEALENY(project);
 
+            makeAPIknowIDAsync();
 
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var directoryname = Path.Combine(documents, project.projectid);
             var cloudPath = Path.Combine(directoryname, "Dashboard.txt");
 
-            string token = File.ReadAllText(cloudPath);
+            var token = File.ReadAllText(cloudPath);
 
-            //Web Session
+            //var url = "https://ntscloud.cc/freeboard/index.html";
+
+            var url = "http://localhost:8080/freeboard/index.html" + token;
+            //var url = "http://localhost:8080/index.html";
+
             WebView web = new WebView();
-            var urlSource = new UrlWebViewSource();
-            string baseUrl = DependencyService.Get<IBaseUrl>().Get();
-
-            token = "3a7bac62-84cd-4245-8c34- 932205f4ea3e:8WeNXJam3TWHTtqHWuUcbq1oxT3gpcdd";
-            string filePathUrl = Path.Combine(baseUrl, "Freeboard", "index.html#" + token);
-
-            //Console.WriteLine(baseUrl);
-            //Console.WriteLine(filePathUrl);
-
-            urlSource.Url = filePathUrl;
-            web.Source = urlSource;
+            web.Source = url;
+            Console.WriteLine(url);
             Content = web;
-
-
         }
 
-        public string DecryptData(string s)
+        public string DecryptData(string cipher)
         {
-            Console.WriteLine("DecryptData FN");
+            //return seal.decryptText(cipher);
 
-            //string result = seal.decryptText(s);
-            //return result;
+            Console.WriteLine("C# function");
 
-            return "OK";
+            return "Touch a C# funciton";
 
         }
 
+        private async void makeAPIknowIDAsync()
+        {
+            var uri = "http://localhost:8080/api/projectid";
+            HttpClient client = new HttpClient();
+            StringContent content = new StringContent(project.projectid, Encoding.UTF8, "application/json");
 
-        
+            var responseMessage = await client.PostAsync(uri, content);
 
+            Console.WriteLine("C# " + responseMessage.StatusCode.ToString());
+
+        }
     }
 }

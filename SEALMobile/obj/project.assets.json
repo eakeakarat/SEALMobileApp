@@ -27,6 +27,18 @@
           "lib/netstandard2.0/DevExpress.XamarinForms.Core.dll": {}
         }
       },
+      "EmbedIO/3.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Unosquare.Swan.Lite": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/EmbedIO.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EmbedIO.dll": {}
+        }
+      },
       "GraphQL.Client/5.1.0": {
         "type": "package",
         "dependencies": {
@@ -1406,6 +1418,15 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "Unosquare.Swan.Lite/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Swan.Lite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swan.Lite.dll": {}
+        }
+      },
       "Xamarin.CommunityToolkit/2.0.5": {
         "type": "package",
         "dependencies": {
@@ -1515,6 +1536,20 @@
         "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.xml",
         "lib/netstandard2.0/DevExpress.XamarinForms.Core.dll",
         "lib/netstandard2.0/DevExpress.XamarinForms.Core.xml"
+      ]
+    },
+    "EmbedIO/3.5.2": {
+      "sha512": "YU4j+3XvuO8/VPkNf7KWOF1TpMhnyVhXnPsG1mvnDhTJ9D5BZOFXVDvCpE/SkQ1AJ0Aa+dXOVSW3ntgmLL7aJg==",
+      "type": "package",
+      "path": "embedio/3.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "embedio.3.5.2.nupkg.sha512",
+        "embedio.nuspec",
+        "lib/netstandard2.0/EmbedIO.dll",
+        "lib/netstandard2.0/EmbedIO.pdb",
+        "lib/netstandard2.0/EmbedIO.xml"
       ]
     },
     "GraphQL.Client/5.1.0": {
@@ -4816,6 +4851,21 @@
         "version.txt"
       ]
     },
+    "Unosquare.Swan.Lite/3.1.0": {
+      "sha512": "X3s5QE/KMj3WAPFqFve7St+Ds10BB50u8kW8PmKIn7FVkn7yEXe9Yxr2htt1WV85DRqfFR0MN/BUNHkGHtL4OQ==",
+      "type": "package",
+      "path": "unosquare.swan.lite/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Swan.Lite.dll",
+        "lib/net461/Swan.Lite.xml",
+        "lib/netstandard2.0/Swan.Lite.dll",
+        "lib/netstandard2.0/Swan.Lite.xml",
+        "unosquare.swan.lite.3.1.0.nupkg.sha512",
+        "unosquare.swan.lite.nuspec"
+      ]
+    },
     "Xamarin.CommunityToolkit/2.0.5": {
       "sha512": "8oFY5ZrKoIOCqtTeRh+jx5TAcs177TU0pEoefMWRptrq+TZoKwsPNg7L8lBtLSP+2ymg4VBn8i/6chA6b4mGdQ==",
       "type": "package",
@@ -5163,6 +5213,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "DevExpress.XamarinForms.Charts >= 22.1.5",
+      "EmbedIO >= 3.5.2",
       "GraphQL.Client >= 5.1.0",
       "GraphQL.Client.Serializer.Newtonsoft >= 5.1.0",
       "MQTTnet >= 4.1.1.318",
@@ -5220,6 +5271,10 @@
           "DevExpress.XamarinForms.Charts": {
             "target": "Package",
             "version": "[22.1.5, )"
+          },
+          "EmbedIO": {
+            "target": "Package",
+            "version": "[3.5.2, )"
           },
           "GraphQL.Client": {
             "target": "Package",

@@ -12,17 +12,15 @@ namespace SEALMobile.Models
         SecretKey secretKey;
         CKKSEncoder encoder;
         Decryptor decryptor;
-        Project project;
+        //Project project;
 
         int scale;
 
         PublicKey publicKey;
 
-        public SEALENY(Project pj)
+        public SEALENY(string projectid)
         {
-
-            project = pj;
-            var pjName = project.projectid;
+            var pjName = projectid;
 
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var directoryname = Path.Combine(documents, pjName);
@@ -64,6 +62,7 @@ namespace SEALMobile.Models
 
             scale = int.Parse(scaleBase64);
 
+            Console.WriteLine(scale);
         }
 
         public string decryptText(string text)
@@ -71,6 +70,7 @@ namespace SEALMobile.Models
             List<double> result = new List<double>();
             Ciphertext cipher = new Ciphertext();
             Plaintext plain = new Plaintext();
+
             MemoryStream textStream = ToMemoryStream(text);
             cipher.Load(context, textStream);
 
@@ -80,18 +80,20 @@ namespace SEALMobile.Models
             return result[0].ToString();
         }
 
-        public string encryptText()
+        public string getEncryptText()
         {
-            float a = 1;
-            float b = 1;
+            var x = 1;
+            var y = 1;
+
 
             encoder = new CKKSEncoder(context);
             var evaluator = new Evaluator(context);
             var encryptor = new Encryptor(context, publicKey);
             using Plaintext plain1 = new Plaintext();
             using Plaintext plain2 = new Plaintext();
-            encoder.Encode(a, scale, plain1);
-            encoder.Encode(b, scale, plain2);
+            double s = Math.Pow(2.0, scale);
+            encoder.Encode(x, s, plain1);
+            encoder.Encode(y, s, plain2);
 
             // encrypt plainText to cipherText
             using Ciphertext cipher1 = new Ciphertext();
@@ -109,9 +111,20 @@ namespace SEALMobile.Models
 
             MemoryStream resultStream = new MemoryStream();
             resultCipher.Save(resultStream);
-            var x = ToBase64(resultStream);
+            var z = ToBase64(resultStream);
 
-            return x;
+            Console.WriteLine("A:B = " + x + ":" + y);
+            //Console.WriteLine(z);
+
+            
+
+            var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var path = Path.Combine(documents, "z.txt");
+
+            File.WriteAllText(path,z);
+
+
+            return z;
         }
 
 
@@ -131,5 +144,6 @@ namespace SEALMobile.Models
             return dataAsStream;
         }
 
+        
     }
 }

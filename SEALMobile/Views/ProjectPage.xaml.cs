@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using GraphQL;
 using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.Newtonsoft;
@@ -19,12 +20,6 @@ namespace SEALMobile.Views
             project = pj;
             Title = project.projectname;
 
-            //EdgesViewModel edgesViewModel = new EdgesViewModel(project);
-            //Edge cloudEdge = edgesViewModel.getCloud();
-
-            //EgdeDetailViewModel edgeDetailViewModel = new EgdeDetailViewModel(cloudEdge);
-            //EdgeDevice cloud = edgeDetailViewModel.GetEdgeDevice();
-
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var directoryname = Path.Combine(documents, project.projectid);
 
@@ -33,68 +28,63 @@ namespace SEALMobile.Views
                 Directory.CreateDirectory(directoryname);
             }
 
-            var cloudPath = Path.Combine(directoryname, "Dashboard.txt");
+            SaveDashboardToken();
 
-            CheckCloud(cloudPath);
+
 
         }
 
-        async void CheckCloud(string cloudPath)
+        async void SaveDashboardToken()
         {
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var path = Path.Combine(documents, "UserInfo", "access_token.txt");
             var token = File.ReadAllText(path);
+
+            var cloudPath = Path.Combine(documents, project.projectid, "Dashboard.txt");
 
             var graphQLHttp = new GraphQLHttpClient("http://fhe.netpie.io:30010/", new NewtonsoftJsonSerializer());
             graphQLHttp.HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
             var edgesREQ = new GraphQLRequest
             {
-                Query = @"query ($pjid: String!, $dname: String) { deviceList(filter:{projectid: $pjid, alias: $dname} )
-                            { alias, deviceid, description }
+                Query = @"query ($pjid: String!, $htag: [String]) { deviceList(filter:{projectid: $pjid, hashtag: $htag}) 
+                            { alias, deviceid, description, hashtag }
                         }",
                 Variables = new
                 {
                     pjid = project.projectid,
-                    dname = "FHE-CLOUD"
+                    htag = "cloud",
                 }
             };
 
-            var graphQLResponse = await graphQLHttp.SendQueryAsync<dataEdge>(edgesREQ);
-            var res = graphQLResponse.Data.deviceList;
-            Edge[] edgesList = res;
-            Edge edge = edgesList[0];
-
-            foreach (Edge e in edgesList)
+            try
             {
-                Console.WriteLine(e.alias);
-                if (e.alias == "FHE-CLOUD")
+                var graphQLResponse = await graphQLHttp.SendQueryAsync<dataEdge>(edgesREQ);
+                Edge res = graphQLResponse.Data.deviceList[0];
+                //Console.WriteLine(res.alias);
+
+                var cloudREQ = new GraphQLRequest
                 {
-                    edge = e;
-                }
-            }
-
-            CloudID(cloudPath, edge, graphQLHttp);
-
-        }
-
-        private async void CloudID(string cloudPath, Edge edge, GraphQLHttpClient graphQLHttp)
-        {
-            var deviceREQ = new GraphQLRequest
-            {
-                Query = @"query($did:String!) {device(deviceid: $did){
-                            alias,description,deviceid,devicetoken,devicesecret,projectid
+                    Query = @"query($did:String!) {device(deviceid: $did){
+                            alias,description,deviceid,devicetoken,hashtag,devicesecret,projectid
                         }}",
-                Variables = new
-                {
-                    did = edge.deviceid
-                }
-            };
+                    Variables = new
+                    {
+                        did = res.deviceid
+                    }
+                };
 
-            var graphQLResponse = await graphQLHttp.SendQueryAsync<dataDevice>(deviceREQ);
-            var res = graphQLResponse.Data.device;
-            EdgeDevice cloud = res;
-            File.WriteAllText(cloudPath, cloud.deviceid + ":" + cloud.devicetoken[0]);
+                var cloudRes = await graphQLHttp.SendQueryAsync<dataDevice>(cloudREQ);
+                var edgeDevice = cloudRes.Data.device;
+                //Console.WriteLine("Dashboard token = " + "#" + edgeDevice.deviceid + ":" + edgeDevice.devicetoken[0]);
+
+                File.WriteAllText(cloudPath, "#" + edgeDevice.deviceid + ":" + edgeDevice.devicetoken[0]);
+
+            }
+            catch (Exception e)
+            {
+                Console.Error.WriteLine(e.ToString());
+            }
 
         }
 
@@ -108,6 +98,7 @@ namespace SEALMobile.Views
         }
         public void Handle_Dashboards(object sender, EventArgs e)
         {
+            //SaveDashboardToken();
             Navigation.PushAsync(new DashboardPage(project), true);
         }
     }

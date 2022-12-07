@@ -20,7 +20,7 @@ namespace SEALMobile.Views
         string qrRes;
         string projectid;
         Edge edge;
-        EgdeDetailViewModel model;
+        EdgeDetailViewModel model;
 
 
         public EdgeDetailPage(Edge e, string id)
@@ -31,7 +31,7 @@ namespace SEALMobile.Views
             Title = edge.alias;
             detail_label.Text = edge.description;
 
-            model = new EgdeDetailViewModel(edge);
+            model = new EdgeDetailViewModel(edge);
         }
 
         async void Pair_Button_Clicked(System.Object sender, System.EventArgs e)
@@ -40,27 +40,49 @@ namespace SEALMobile.Views
             string text = result.ToString();
             qrRes = text;
             //qrRes = "{ \"hostname\":\"eak\",\"hostIP\":\"http://localhost:9000\",\"endPoint\":\"/import/contextAndPublicKey\",\"oneTimePassword\":\"gogeEaTNdTeUYT3Wan5lSSTe8bRkUulFQ7RhsZCX8yWzl7mAwt\"} ";
+            if (!result.Equals("closed") )
+            {
+                JObject hostJson = JObject.Parse(qrRes);
+                Host host = hostJson.ToObject<Host>();
 
-            JObject hostJson = JObject.Parse(qrRes);
-            Host host = hostJson.ToObject<Host>();
+                string uri = "";
 
-            string uri = host.hostIP + host.endpoint;
-            Console.WriteLine(uri);
+                if (!host.hostIP.Contains("http"))
+                {
+                    uri += "http://"; 
+                }
 
-            HttpClient client = new HttpClient();
+                uri += host.hostIP;
 
-            var edgeReq = prepareEdgeREQ();
-            edgeReq.oneTimePassword = host.oneTimePassword;
+                if (host.port != null && host.port != "")
+                {
+                    uri += ":" + host.port;
+                }
 
-            dataPacking dataPacking = new dataPacking { data = edgeReq };
-            string jsonPacking = JsonConvert.SerializeObject(dataPacking, Formatting.Indented);
-            StringContent content = new StringContent(jsonPacking, Encoding.UTF8, "application/json");
+                uri += host.endpoint;
 
-            var responseMessage = await client.PostAsync(uri, content);
+                Console.WriteLine(uri);
 
-            Console.WriteLine(responseMessage.StatusCode.ToString());
+                HttpClient client = new HttpClient();
 
-            await Navigation.PopAsync();
+                var edgeReq = prepareEdgeREQ();
+                edgeReq.oneTimePassword = host.oneTimePassword;
+
+                //dataPacking dataPacking = new dataPacking { data = edgeReq };
+                //string jsonPacking = JsonConvert.SerializeObject(dataPacking, Formatting.Indented);
+                string jsonPacking = JsonConvert.SerializeObject(edgeReq, Formatting.Indented);
+
+                StringContent content = new StringContent(jsonPacking, Encoding.UTF8, "application/json");
+
+                var responseMessage = await client.PostAsync(uri, content);
+
+                Console.WriteLine(responseMessage.StatusCode.ToString());
+                await Navigation.PopAsync();
+            }
+            else
+            {
+                await Navigation.PopAsync();
+            }
 
         }
 
@@ -161,6 +183,7 @@ namespace SEALMobile.Views
         public string hostIP { get; set; }
         public string endpoint { get; set; }
         public string oneTimePassword { get; set; }
+        public string port { get; set; }
     }
 
     public class EdgeReq

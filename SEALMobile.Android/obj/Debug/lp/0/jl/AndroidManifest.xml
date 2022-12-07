@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devexpress.dxcharts"
+    android:versionName="22.1.5" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="29" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" >
+    </uses-feature>
+
+</manifest>

@@ -3,6 +3,11 @@ using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SEALMobile.Views;
+using System.Threading.Tasks;
+using EmbedIO;
+using System.Reflection;
+using EmbedIO.WebApi;
+using SEALMobile.Services;
 
 namespace SEALMobile
 {
@@ -13,12 +18,27 @@ namespace SEALMobile
             DevExpress.XamarinForms.Charts.Initializer.Init();
 
             InitializeComponent();
-            //MainPage = new NavigationPage(new DashboardPage());
+
+            Task.Factory.StartNew(async () =>
+            {
+                using (var server = new WebServer(HttpListenerMode.EmbedIO, "http://*:8080"))
+                {
+                    Assembly assembly = typeof(App).Assembly;
+                    server.WithLocalSessionManager();
+                    server.WithWebApi("/api", m => m.WithController(() => new ApiController()));
+                    server.WithEmbeddedResources("/", assembly, "SEALMobile.html");
+                    await server.RunAsync();
+                }
+            });
+
+
+            //MainPage = new NavigationPage(new TestImportPage());
 
             MainPage = new NavigationPage(new LoginPage());
             //MainPage = new NavigationPage(new UserHomePage());
             //MainPage = new NavigationPage(new ProjectPage());
             //MainPage = new NavigationPage(new CreateProjectPage());
+            //MainPage = new NavigationPage(new DashboardPage());
 
         }
 

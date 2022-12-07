@@ -1,60 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>8.0</LangVersion>
-    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebugType>portable</DebugType>
-    <DebugSymbols>true</DebugSymbols>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
-    <PackageReference Include="Microsoft.Research.SEALNet" Version="4.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="System.Net.Http" Version="4.3.4" />
-    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
-    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
-    <PackageReference Include="DevExpress.XamarinForms.Charts" Version="22.1.5" />
-    <PackageReference Include="GraphQL.Client" Version="5.1.0" />
-    <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="5.1.0" />
-    <PackageReference Include="MQTTnet" Version="4.1.1.318" />
-    <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="4.1.1.318" />
-    <PackageReference Include="MQTTnet.AspNetCore" Version="4.1.1.318" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Microsoft.Research.SEALNet" />
-    <None Remove="Newtonsoft.Json" />
-    <None Remove="System.Net.Http" />
-    <None Remove="Models\" />
-    <None Remove="Views\" />
-    <None Remove="ZXing.Net.Mobile" />
-    <None Remove="Services\" />
-    <None Remove="ZXing.Net.Mobile.Forms" />
-    <None Remove="Xamarin.CommunityToolkit" />
-    <None Remove="Syncfusion.Xamarin.SfChart" />
-    <None Remove="DevExpress.XamarinForms.Charts" />
-    <None Remove="GraphQL.Client" />
-    <None Remove="GraphQL.Client.Serializer.Newtonsoft" />
-    <None Remove="MQTTnet" />
-    <None Remove="M2Mqtt" />
-    <None Remove="MQTTnet.Extensions.ManagedClient" />
-    <None Remove="MQTTnet.AspNetCore" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Views\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MyScanner.xaml.cs">
-      <DependentUpon>MyScanner.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>8.0</LangVersion>
+		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+		<PackageReference Include="Microsoft.Research.SEALNet" Version="4.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="System.Net.Http" Version="4.3.4" />
+		<PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+		<PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+		<PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
+		<PackageReference Include="DevExpress.XamarinForms.Charts" Version="22.1.5" />
+		<PackageReference Include="GraphQL.Client" Version="5.1.0" />
+		<PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="5.1.0" />
+		<PackageReference Include="MQTTnet" Version="4.1.1.318" />
+		<PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="4.1.1.318" />
+		<PackageReference Include="MQTTnet.AspNetCore" Version="4.1.1.318" />
+		<PackageReference Include="EmbedIO" Version="3.5.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="Microsoft.Research.SEALNet" />
+		<None Remove="Newtonsoft.Json" />
+		<None Remove="System.Net.Http" />
+		<None Remove="Models\" />
+		<None Remove="Views\" />
+		<None Remove="ZXing.Net.Mobile" />
+		<None Remove="Services\" />
+		<None Remove="ZXing.Net.Mobile.Forms" />
+		<None Remove="Xamarin.CommunityToolkit" />
+		<None Remove="Syncfusion.Xamarin.SfChart" />
+		<None Remove="DevExpress.XamarinForms.Charts" />
+		<None Remove="GraphQL.Client" />
+		<None Remove="GraphQL.Client.Serializer.Newtonsoft" />
+		<None Remove="MQTTnet" />
+		<None Remove="M2Mqtt" />
+		<None Remove="MQTTnet.Extensions.ManagedClient" />
+		<None Remove="MQTTnet.AspNetCore" />
+		<None Remove="EmbedIO" />
+		<None Remove="html\" />
+		<None Remove="html\index.html" />
+		<None Remove="html\myScript.js" />
+		<None Remove="html\freeboard\css\freeboard.css" />
+		<None Remove="html\freeboard\plugins\.DS_Store" />
+		<None Remove="html\freeboard\plugins\cyblion\browsermqtt.js" />
+		<None Remove="html\freeboard\plugins\cyblion\cyblion.datasource.js" />
+		<None Remove="html\freeboard\plugins\cyblion\cyblion.decryptor.js" />
+		<None Remove="html\freeboard\plugins\cyblion\cyblion.mqtt.js" />
+		<None Remove="html\freeboard\plugins\freeboard\freeboard.datasources.js" />
+		<None Remove="html\freeboard\plugins\freeboard\freeboard.widgets.js" />
+		<None Remove="html\freeboard\plugins\thirdparty\jquery.sparkline.min.js" />
+		<None Remove="html\freeboard\plugins\thirdparty\justgage.1.0.1.js" />
+		<None Remove="html\freeboard\plugins\thirdparty\raphael.2.1.0.min.js" />
+		<None Remove="html\freeboard\plugins\" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Models\" />
+		<Folder Include="Views\" />
+		<Folder Include="Services\" />
+		<Folder Include="html\" />
+		<Folder Include="html\freeboard\" />
+		<Folder Include="html\freeboard\css\" />
+		<Folder Include="html\freeboard\js\" />
+		<Folder Include="html\freeboard\plugins\" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="html\index.html" />
+		<EmbeddedResource Include="html\myScript.js" />
+		<EmbeddedResource Include="html\freeboard\index.html" />
+		<EmbeddedResource Include="html\freeboard\js\*" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MyScanner.xaml.cs">
+			<DependentUpon>MyScanner.xaml</DependentUpon>
+			<SubType>Code</SubType>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="html\freeboard\plugins\.DS_Store" />
+	  <BundleResource Include="html\freeboard\plugins\cyblion\browsermqtt.js" />
+	  <BundleResource Include="html\freeboard\plugins\cyblion\cyblion.datasource.js" />
+	  <BundleResource Include="html\freeboard\plugins\cyblion\cyblion.decryptor.js" />
+	  <BundleResource Include="html\freeboard\plugins\cyblion\cyblion.mqtt.js" />
+	  <BundleResource Include="html\freeboard\plugins\freeboard\freeboard.datasources.js" />
+	  <BundleResource Include="html\freeboard\plugins\freeboard\freeboard.widgets.js" />
+	  <BundleResource Include="html\freeboard\plugins\thirdparty\jquery.sparkline.min.js" />
+	  <BundleResource Include="html\freeboard\plugins\thirdparty\justgage.1.0.1.js" />
+	  <BundleResource Include="html\freeboard\plugins\thirdparty\raphael.2.1.0.min.js" />
+	</ItemGroup>
 </Project>

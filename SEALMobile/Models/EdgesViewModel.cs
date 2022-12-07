@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using GraphQL;
 using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.Newtonsoft;
@@ -13,14 +14,17 @@ namespace SEALMobile.Models
     {
         public ObservableCollection<Edge> Edges { get; set; }
         public Edge[] edgesList;
+        GraphQLHttpClient graphQLHttp;
+        string id;
 
         public EdgesViewModel(Project project)
         {
             Edges = new ObservableRangeCollection<Edge>();
-            LoadMore(project.projectid);
+            id = project.projectid;
+            LoadMore();
         }
 
-        async void LoadMore(string id)
+        async void LoadMore()
         {
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var path = Path.Combine(documents, "UserInfo", "access_token.txt");
@@ -32,7 +36,7 @@ namespace SEALMobile.Models
             var edgesREQ = new GraphQLRequest
             {
                 Query = @"query ($pjid: String!) { deviceList(filter:{projectid: $pjid} )
-                            { alias, deviceid, description }
+                            { alias, deviceid, description, hashtag }
                         }",
                 Variables = new
                 {
@@ -50,6 +54,7 @@ namespace SEALMobile.Models
             }
 
         }
+
         public Edge findEdge(string id)
         {
             Edge edge = new Edge();
@@ -62,18 +67,7 @@ namespace SEALMobile.Models
             }
             return edge;
         }
-        public Edge getCloud()
-        {
-            Edge edge = new Edge();
-            foreach (Edge e in edgesList)
-            {
-                if (e.alias == "FHE-CLOUD")
-                {
-                    edge = e;
-                }
-            }
-            return edge;
-        }
+
     }
 
     public class dataEdge
@@ -86,6 +80,7 @@ namespace SEALMobile.Models
         public string alias { get; set; }
         public string deviceid { get; set; }
         public string description { get; set; }
-        public string tag { get; set; }
+        public string[] hashtag { get; set; }
+
     }
 }

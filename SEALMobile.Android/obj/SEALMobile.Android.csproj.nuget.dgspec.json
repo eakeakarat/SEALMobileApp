@@ -41,6 +41,10 @@
               "target": "Package",
               "version": "[22.1.5, )"
             },
+            "EmbedIO": {
+              "target": "Package",
+              "version": "[3.5.2, )"
+            },
             "GraphQL.Client": {
               "target": "Package",
               "version": "[5.1.0, )"
@@ -135,6 +139,10 @@
             "DevExpress.XamarinForms.Charts": {
               "target": "Package",
               "version": "[22.1.5, )"
+            },
+            "EmbedIO": {
+              "target": "Package",
+              "version": "[3.5.2, )"
             },
             "GraphQL.Client": {
               "target": "Package",

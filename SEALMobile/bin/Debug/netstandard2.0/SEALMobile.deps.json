@@ -10,6 +10,7 @@
       "SEALMobile/1.0.0": {
         "dependencies": {
           "DevExpress.XamarinForms.Charts": "22.1.5",
+          "EmbedIO": "3.5.2",
           "GraphQL.Client": "5.1.0",
           "GraphQL.Client.Serializer.Newtonsoft": "5.1.0",
           "MQTTnet": "4.1.1.318",
@@ -49,6 +50,17 @@
           "lib/netstandard2.0/DevExpress.XamarinForms.Core.dll": {
             "assemblyVersion": "22.1.5.0",
             "fileVersion": "22.1.5.0"
+          }
+        }
+      },
+      "EmbedIO/3.5.2": {
+        "dependencies": {
+          "Unosquare.Swan.Lite": "3.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/EmbedIO.dll": {
+            "assemblyVersion": "3.5.2.0",
+            "fileVersion": "3.5.2.0"
           }
         }
       },
@@ -1047,6 +1059,14 @@
           }
         }
       },
+      "Unosquare.Swan.Lite/3.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Swan.Lite.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
+          }
+        }
+      },
       "Xamarin.CommunityToolkit/2.0.5": {
         "dependencies": {
           "System.Reflection.Emit.Lightweight": "4.7.0",
@@ -1136,6 +1156,13 @@
       "sha512": "sha512-goMu+5gG9G6mRZylUG95N86AaPC3mUzwWVC9OUIio6d+nQzzzIccVC/ieNAgW8IKv9l1fEh1utDzh25JS02BPQ==",
       "path": "devexpress.xamarinforms.core/22.1.5",
       "hashPath": "devexpress.xamarinforms.core.22.1.5.nupkg.sha512"
+    },
+    "EmbedIO/3.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YU4j+3XvuO8/VPkNf7KWOF1TpMhnyVhXnPsG1mvnDhTJ9D5BZOFXVDvCpE/SkQ1AJ0Aa+dXOVSW3ntgmLL7aJg==",
+      "path": "embedio/3.5.2",
+      "hashPath": "embedio.3.5.2.nupkg.sha512"
     },
     "GraphQL.Client/5.1.0": {
       "type": "package",
@@ -1829,6 +1856,13 @@
       "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
+    "Unosquare.Swan.Lite/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X3s5QE/KMj3WAPFqFve7St+Ds10BB50u8kW8PmKIn7FVkn7yEXe9Yxr2htt1WV85DRqfFR0MN/BUNHkGHtL4OQ==",
+      "path": "unosquare.swan.lite/3.1.0",
+      "hashPath": "unosquare.swan.lite.3.1.0.nupkg.sha512"
     },
     "Xamarin.CommunityToolkit/2.0.5": {
       "type": "package",

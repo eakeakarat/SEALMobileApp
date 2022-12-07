@@ -174,6 +174,7 @@
 	--reference=/Users/eakarat/.nuget/packages/devexpress.xamarinforms.charts/22.1.5/lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll \
 	--reference=/Users/eakarat/.nuget/packages/devexpress.xamarinforms.core/22.1.5/lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll \
 	--reference=/Users/eakarat/.nuget/packages/devexpress.xamarinforms.core/22.1.5/lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll \
+	--reference=/Users/eakarat/.nuget/packages/embedio/3.5.2/lib/netstandard2.0/EmbedIO.dll \
 	--reference=/Users/eakarat/.nuget/packages/graphql.client/5.1.0/lib/netstandard2.0/GraphQL.Client.dll \
 	--reference=/Users/eakarat/.nuget/packages/graphql.client.abstractions/5.1.0/lib/netstandard2.0/GraphQL.Client.Abstractions.dll \
 	--reference=/Users/eakarat/.nuget/packages/graphql.client.abstractions.websocket/5.1.0/lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll \
@@ -215,6 +216,7 @@
 	--reference=/Users/eakarat/.nuget/packages/system.reactive/5.0.0/lib/netstandard2.0/System.Reactive.dll \
 	--reference=/Users/eakarat/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.1/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll \
 	--reference=/Users/eakarat/.nuget/packages/system.text.encodings.web/4.5.0/lib/netstandard2.0/System.Text.Encodings.Web.dll \
+	--reference=/Users/eakarat/.nuget/packages/unosquare.swan.lite/3.1.0/lib/netstandard2.0/Swan.Lite.dll \
 	--reference=/Users/eakarat/.nuget/packages/xamarin.communitytoolkit/2.0.5/lib/xamarinios10/Xamarin.CommunityToolkit.dll \
 	--reference=/Users/eakarat/.nuget/packages/xamarin.essentials/1.7.3/lib/xamarinios10/Xamarin.Essentials.dll \
 	--reference=/Users/eakarat/.nuget/packages/xamarin.forms/5.0.0.2515/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \

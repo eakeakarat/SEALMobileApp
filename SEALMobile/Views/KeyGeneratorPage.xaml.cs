@@ -112,8 +112,11 @@ namespace SEALMobile.Views
 
                 sendRlkToCloud(rlkBase64);
 
+                Console.WriteLine("CONTEXT SIZE: " + contextSize.PolyModulusDegree + " __ " + contextSize.CoeffModulus[0]);
+
                 GenKeyBtn.Text = "Key Generated !";
-                Dropdown.SelectedIndex = 0;
+                Dropdown.SelectedIndex = -1;
+
 
             }
             else

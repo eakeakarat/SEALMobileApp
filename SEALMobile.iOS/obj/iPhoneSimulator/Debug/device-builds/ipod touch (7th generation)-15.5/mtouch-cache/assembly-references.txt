@@ -24,6 +24,8 @@
 /Users/eakarat/.nuget/packages/xamarin.forms/5.0.0.2515/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll
 /Users/eakarat/Projects/xamarin-seal-main/SEALMobile/bin/Debug/netstandard2.0/SEALMobile.dll
 /Users/eakarat/.nuget/packages/xamarin.forms/5.0.0.2515/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
+/Users/eakarat/.nuget/packages/embedio/3.5.2/lib/netstandard2.0/EmbedIO.dll
+/Users/eakarat/.nuget/packages/unosquare.swan.lite/3.1.0/lib/netstandard2.0/Swan.Lite.dll
 /Users/eakarat/.nuget/packages/microsoft.research.sealnet/4.0.0/lib/Xamarin.iOS10/SEALNet.dll
 /Users/eakarat/.nuget/packages/xamarin.communitytoolkit/2.0.5/lib/xamarinios10/Xamarin.CommunityToolkit.dll
 /Users/eakarat/.nuget/packages/zxing.net.mobile.forms/2.4.1/lib/Xamarin.iOS10/ZXing.Net.Mobile.Forms.dll
