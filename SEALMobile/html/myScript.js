@@ -1,4 +1,7 @@
 ﻿var c = true;
+
+var x = '';
+
 function test() {
     if (c) {
         document.getElementById("text").innerText = "Hello, JS function is Working";
@@ -26,16 +29,32 @@ async function getRequest() {
     }
 }
 
-async function postRequest() {
+async function getmockCipher() {
+    let url = 'http://localhost:8080/api/mockcipher';
 
+    let res = await fetch(url, {
+        method: 'GET',
+    });
+
+    if (res.ok) {
+        let ret = await res.text();
+        return ret;
+
+    } else {
+        return `HTTP error: ${res.status}`;
+    }
+}
+
+async function postRequest() {
     let url = 'http://localhost:8080/api/cipher';
 
+    console.log("X ===> " + x);
     let res = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'text/html',
         },
-        body: 'This is Cipher From JS',
+        body: x,
     });
 
     if (res.ok) {
@@ -48,6 +67,6 @@ async function postRequest() {
     } else {
         return `HTTP error: ${res.status}`;
     }
-
-
 }
+
+getmockCipher().then(ret => { x = ret; console.log(x);})

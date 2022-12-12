@@ -495,12 +495,39 @@ function FreeboardModel(datasourcePlugins, widgetPlugins, freeboardUI)
 		});
 	}
 
-
-	this.loadDashboardFromLocalFile = function(cred)
+	this.loadDashboardFromLocalFile = function()
 	{
+		console.Log("XD");
+		let fetchResponse = fetch('http://gqlv2.netpie.io/', {
+		    method: 'POST',
+		    headers: {
+		        'Accept-Encoding': 'gzip, deflate, br',
+		        'Content-Type': 'application/json',
+		        'Accept': 'application/json',
+		        'Connection': 'keep-alive',
+		        'DNT': '1',
+		        'Origin': 'http://gqlv2.netpie.io',
+		        'Authorization': 'eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdHgiOnsidXNlcmlkIjoiVTkzODc4ODI5NDUyMiIsImNsaWVudGlkIjoiNWI0NGM0ZDRkMWMwODY5ZmE0YjNlZDkyZTFmNzgzYjgifSwic2NvcGUiOltdLCJpYXQiOjE2NjQ3ODQxNzYsIm5iZiI6MTY2NDc4NDE3NiwiZXhwIjoxOTgwNDAzNTQ4LCJleHBpcmVJbiI6MzE1NjE5MzcyLCJqdGkiOiJpZ21rMUVpRSIsImlzcyI6ImNlcjp1c2VydG9rZW4ifQ.wNf8zR-wYqGOW5IRs4EG7MzrukVer-HxSHHaXmW13LwGgA3YAxKq9uCMnhEhSjyptVgHFPjI9vTEhne15oG--A'
+		    },
+		    body: JSON.stringify({
+		        'query': 'query dashboardList {\n  freeboardConfig (dashboardid:"DASH18439271") {\n    config\n  }\n}\n'
+		    })
+		});
 
+		fetchResponse.then(res =>
+            res.json()).then(d => {
+								freeboardConfig = d['data']['freeboardConfig']['config']
+								console.log(freeboardConfig);
+								self.loadDashboard(freeboardConfig);
+            });
+
+		console.log("XD");
+	}
+
+	// Default function
+	/*{
 		// Check for the various File API support.
-		if(window.File && window.FileReader && window.FileList && window.Blob)
+		/*if(window.File && window.FileReader && window.FileList && window.Blob)
 		{
 			var input = document.createElement('input');
 			input.type = "file";
@@ -519,27 +546,6 @@ function FreeboardModel(datasourcePlugins, widgetPlugins, freeboardUI)
 						var textFile = fileReaderEvent.target;
 						var jsonObject = JSON.parse(textFile.result);
 
-						//------
-				            let newdatasource = [];
-				            if (cred && cred.deviceid && cred.devicetoken && jsonObject) {
-				                for (let i in jsonObject.datasources) {
-				                    let ds = jsonObject.datasources[i];
-				                    if (ds.name != 'dashboard') {
-				                        newdatasource.push(ds);
-				                    }
-				                }
-				                newdatasource.push({
-				                    name: 'dashboard',
-				                    settings: {
-				                        name: 'dashboard' ,
-				                        deviceid: cred.deviceid,
-				                        devicetoken: cred.devicetoken
-				                    },
-				                    type: 'cyblion_datasource'
-				                });
-				                jsonObject.datasources = newdatasource;
-				            }
-						//------
 
 						self.loadDashboard(jsonObject);
 						self.setEditing(false);
@@ -555,7 +561,7 @@ function FreeboardModel(datasourcePlugins, widgetPlugins, freeboardUI)
 		{
 			alert('Unable to load a file in this browser.');
 		}
-	}
+	}*/
 
 	this.saveDashboardClicked = function(){
 		var target = $(event.currentTarget);
@@ -847,7 +853,7 @@ function FreeboardUI()
 
 		if(newCols === grid.cols)
 		{
-			return false; 
+			return false;
 		}
 		else
 		{
@@ -2878,6 +2884,7 @@ var freeboard = (function()
 					success: function(data)
 					{
 						theFreeboardModel.loadDashboard(data);
+						//theFreeboardModel.setEditing(false);
 
 						if(_.isFunction(finishedCallback))
 						{
@@ -3043,10 +3050,6 @@ var freeboard = (function()
 		showDeveloperConsole : function()
 		{
 			developerConsole.showDeveloperConsole();
-		},
-		loadFromFile : function(cred)
-		{
-			theFreeboardModel.loadDashboardFromLocalFile(cred);
 		}
 	};
 }());

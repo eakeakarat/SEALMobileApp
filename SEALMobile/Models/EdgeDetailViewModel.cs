@@ -17,7 +17,7 @@ namespace SEALMobile.Models
             edge = e;
             device = new EdgeDevice();
             Console.WriteLine(e.alias);
-            //LoadMore();
+            LoadMore();
         }
         async void LoadMore()
         {

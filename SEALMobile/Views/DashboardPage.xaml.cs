@@ -14,8 +14,6 @@ namespace SEALMobile.Views
 {
     public interface IBaseUrl { string Get(); }
 
-
-
     public partial class DashboardPage : ContentPage
     {
         Project project;

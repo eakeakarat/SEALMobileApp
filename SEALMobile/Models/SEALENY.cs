@@ -82,8 +82,8 @@ namespace SEALMobile.Models
 
         public string getEncryptText()
         {
-            var x = 1;
-            var y = 1;
+            var x = 100;
+            var y = 50;
 
 
             encoder = new CKKSEncoder(context);

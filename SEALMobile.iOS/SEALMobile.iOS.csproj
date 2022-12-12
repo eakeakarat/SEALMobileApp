@@ -181,11 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\local.html" />
-    <BundleResource Include="Resources\freeboard\*" />
-    <BundleResource Include="Resources\freeboard\index.html" />
-    <BundleResource Include="Resources\freeboard\*\*" />
-    <BundleResource Include="Resources\freeboard\*\*\*" />
-    <BundleResource Include="Resources\freeboard\*\*\*\*" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\style.css" />

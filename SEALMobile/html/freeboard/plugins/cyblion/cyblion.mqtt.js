@@ -51,7 +51,7 @@ class CyblionMQTT {
 	                        c(topic, payload1, payload2, payload3);
 	                    }
 	                }
-	            }       
+	            }
 	            if (that.eventhandler_once[event]) {
 	                for (let c of that.eventhandler_once[event]) {
 	                    if (typeof(c) == 'function') {
@@ -63,10 +63,10 @@ class CyblionMQTT {
 	                        if (plist[i] === c) {
 	                            plist.splice(i,1);
 	                            return;
-	                        } 
+	                        }
 	                    }
 	                }
-	            }       
+	            }
 	        },
 
 	        removeListener(event, handler) {
@@ -80,16 +80,16 @@ class CyblionMQTT {
 	                if (plist[i] === handler) {
 	                    plist.splice(i,1);
 	                    return;
-	                } 
-	            }       
+	                }
+	            }
 
 	            plist = that.eventhandler_once[event];
 	            for (let i in plist) {
 	                if (plist[i] === handler) {
 	                    plist.splice(i,1);
 	                    return;
-	                } 
-	            }       
+	                }
+	            }
 	        }
 	    }
 
@@ -217,7 +217,7 @@ class CyblionMQTT {
 	connect() {
 		let that = this;
 		this._connect_netpie();
-	}	
+	}
 
 	disconnect() {
 		this.netpie_client.end(true);

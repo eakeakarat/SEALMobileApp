@@ -1,5 +1,5 @@
 if (typeof cyblion === 'undefined') {
-  cyblion = {};
+    cyblion = {};
 }
 
 (function () {
@@ -41,13 +41,14 @@ if (typeof cyblion === 'undefined') {
 
         this.cyblionmqtt = new CyblionMQTT({
             deviceid: currentSettings.deviceid,
-            devicetoken: currentSettings.devicetoken
+            devicetoken: currentSettings.devicetoken,
+            secure: true
         });
 
         cyblion[currentSettings.name] = {
-            publish : self.cyblionmqtt.publish.bind(self.cyblionmqtt)
+            publish: self.cyblionmqtt.publish.bind(self.cyblionmqtt)
         }
-		updateCallback(self.store);
+        updateCallback(self.store);
 
         this.onSettingsChanged = function (newSettings) {
 
@@ -62,45 +63,53 @@ if (typeof cyblion === 'undefined') {
             delete self.cyblionmqtt;
         };
 
-		this.cyblionmqtt.on('msg', (topic, payload) => {
+        this.cyblionmqtt.on('msg', (topic, payload) => {
             console.log(`@msg : ${topic} ==> ${payload}`)
             let newchunk = {};
-            let ptopic = topic.replace('@msg/','');
+            let ptopic = topic.replace('@msg/', '');
 
             newchunk[ptopic] = payload;
-            self.store = {...self.store, ...{
-                msg: newchunk
-            }};
+            self.store = {
+                ...self.store, ...{
+                    msg: newchunk
+                }
+            };
             updateCallback(self.store);
-		})
+        })
 
         this.cyblionmqtt.on('cmsg', (topic, payload) => {
             console.log(`@cmsg : ${topic} ==> ${payload}`)
             let newchunk = {};
-            let ptopic = topic.replace('@msg/','');
+            let ptopic = topic.replace('@msg/', '');
 
             newchunk[ptopic] = cyblion_decrypt(payload);
-            self.store = {...self.store, ...{
-                cmsg: newchunk
-            }};
+            self.store = {
+                ...self.store, ...{
+                    cmsg: newchunk
+                }
+            };
             updateCallback(self.store);
         })
 
-        this.cyblionmqtt.on('cstore', (topic, payload) => {
+        this.cyblionmqtt.on('cstore', async(topic, payload) => {
             console.log(`@cstore : ${topic} ==> ${payload}`)
+
             let newchunk = {};
-            let ptopic = topic.replace('@cstore/data/updated/','');
-           
-            newchunk[ptopic] = cyblion_decrypt(payload);
-            self.store = {...self.store, ...{
-                cstore: newchunk
-            }};
+            let ptopic = topic.replace('@cstore/data/updated/', '');
+
+            newchunk[ptopic] = await cyblion_decrypt(payload);
+
+            self.store = {
+                ...self.store, ...{
+                    cstore: newchunk
+                }
+            };
             updateCallback(self.store);
         })
 
         this.cyblionmqtt.on('connected', () => {
-        	console.log('connected');
-			this.cyblionmqtt.subscribe('@private/#');
+            console.log('connected');
+            this.cyblionmqtt.subscribe('@private/#');
             this.cyblionmqtt.subscribe('@cprivate/#');
 
             this.cyblionmqtt.subscribe('@msg/#');
@@ -110,7 +119,7 @@ if (typeof cyblion === 'undefined') {
         })
 
         this.cyblionmqtt.on('disconnected', () => {
-        	console.log('disconnected');
+            console.log('disconnected');
         })
 
         this.cyblionmqtt.connect();

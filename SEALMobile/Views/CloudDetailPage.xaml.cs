@@ -30,7 +30,7 @@ namespace SEALMobile.Views
         }
 
 
-        async void SendKey_Button_Clicked(System.Object sender, System.EventArgs e)
+        void SendKey_Button_Clicked(System.Object sender, System.EventArgs e)
         {
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var rlkPath = Path.Combine(documents, projectid, "relinKeys.txt");

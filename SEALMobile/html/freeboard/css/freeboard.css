@@ -418,7 +418,7 @@ html {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	font-family: sans-serif; /* 1 */
+	font-family: 'Red Hat Display', sans-serif; /* 1 */
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -771,7 +771,8 @@ html {
 body {
 	background-color: #101214;
 	color: #8b8b8b;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Red Hat Display', sans-serif;
 	font-size: 14px;
 	line-height: 20px;
 	height: 100%;
@@ -996,7 +997,7 @@ h4,
 h5,
 h6 {
 	margin: 10px 0;
-	font-family: inherit;
+	font-family: 'Red Hat Display', sans-serif;
 	font-weight: bold;
 	line-height: 20px;
 	color: inherit;
@@ -1174,6 +1175,7 @@ header h1 {
 	left: 0;
 	right: 0;
 	width: 50px;
+  color: #07aaea;
 	background-color: #313131;
 	text-align: center;
 	cursor: pointer;
@@ -1226,6 +1228,15 @@ header h1 {
 #board-tools {
 	width: 50%;
 	float: left;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+#board-logo {
+  width: 50%;
+  font-size: 40px;
+  color: white;
+  float: left;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 .table thead th {
@@ -1242,6 +1253,7 @@ header h1 {
 	width: 50%;
 	float: right;
 	height: 100%;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 #cam {
@@ -2131,6 +2143,7 @@ ul.board-toolbar.vertical {
 
 .board-toolbar.vertical li {
 	float: none;
+  color: #07aaea;
 }
 
 .board-toolbar li:hover {
@@ -2164,6 +2177,7 @@ ul.board-toolbar.vertical {
 }
 
 .datasource-name {
+  color: #07aaea;
 	text-transform: none;
 }
 
@@ -2334,12 +2348,14 @@ h2.title {
 
 	#board-tools {
 		width: 100%;
+    font-family: 'Red Hat Display', sans-serif;
 	}
 
 	#datasources {
 		width: 100%;
 		float: none;
 		clear: both;
+    font-family: 'Red Hat Display', sans-serif;
 	}
 
 	#board-actions {
@@ -2348,6 +2364,8 @@ h2.title {
 
 	#board-logo {
 		float: left;
+    font-family: 'Red Hat Display', sans-serif;
+    color: white;
 	}
 
 	.modal header {
@@ -2727,4 +2745,3 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 	width: 100%;
 	height: 100% !important;
 }
-

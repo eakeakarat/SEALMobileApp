@@ -55,6 +55,7 @@ JustGage = function(config)
 
 		// gaugeColor : string
 		// background color of gauge element
+    // init color.
 		gaugeColor          : (config.gaugeColor) ? config.gaugeColor : "#edebeb",
 
 		// label : string
@@ -300,7 +301,8 @@ JustGage.prototype.refresh = function(val)
 		val = this.config.min;
 	}
 
-	var color = getColorForPercentage((val - this.config.min) / (this.config.max - this.config.min), this.config.levelColors, this.config.levelColorsGradient);
+	//var color = getColorForPercentage((val - this.config.min) / (this.config.max - this.config.min), this.config.levelColors, this.config.levelColorsGradient);
+  var color = "#09a8ea";
 	this.canvas.getById(this.config.id + "-txtvalue").attr({"text": originalVal});
 	this.canvas.getById(this.config.id + "-level").animate({pki                                       : [val,
 	                                                                                                     this.config.min,

@@ -1,5 +1,5 @@
-function cyblion_decrypt(ciphertext) {
-    
+async function cyblion_decrypt(ciphertext) {
+
     let url = 'http://localhost:8080/api/cipher';
 
     let res = await fetch(url, {
@@ -14,6 +14,8 @@ function cyblion_decrypt(ciphertext) {
         let plaintext = await res.text();
 
         console.log(res);
+
+        plaintext = plaintext.replace(/(^"|"$)/g, '');
         console.log(plaintext);
 
         return plaintext;
@@ -21,5 +23,5 @@ function cyblion_decrypt(ciphertext) {
     } else {
         return `HTTP error: ${res.status}`;
     }
-
 }
+

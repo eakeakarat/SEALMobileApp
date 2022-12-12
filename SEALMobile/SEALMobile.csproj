@@ -60,6 +60,7 @@
 		<None Remove="html\freeboard\plugins\thirdparty\justgage.1.0.1.js" />
 		<None Remove="html\freeboard\plugins\thirdparty\raphael.2.1.0.min.js" />
 		<None Remove="html\freeboard\plugins\" />
+		<None Remove="html\freeboard\scriptForToken.js" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Models\" />
@@ -76,6 +77,7 @@
 		<EmbeddedResource Include="html\myScript.js" />
 		<EmbeddedResource Include="html\freeboard\index.html" />
 		<EmbeddedResource Include="html\freeboard\js\*" />
+		<EmbeddedResource Include="html\freeboard\scriptForToken.js" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MyScanner.xaml.cs">
@@ -84,15 +86,16 @@
 		</Compile>
 	</ItemGroup>
 	<ItemGroup>
-	  <BundleResource Include="html\freeboard\plugins\.DS_Store" />
-	  <BundleResource Include="html\freeboard\plugins\cyblion\browsermqtt.js" />
-	  <BundleResource Include="html\freeboard\plugins\cyblion\cyblion.datasource.js" />
-	  <BundleResource Include="html\freeboard\plugins\cyblion\cyblion.decryptor.js" />
-	  <BundleResource Include="html\freeboard\plugins\cyblion\cyblion.mqtt.js" />
-	  <BundleResource Include="html\freeboard\plugins\freeboard\freeboard.datasources.js" />
-	  <BundleResource Include="html\freeboard\plugins\freeboard\freeboard.widgets.js" />
-	  <BundleResource Include="html\freeboard\plugins\thirdparty\jquery.sparkline.min.js" />
-	  <BundleResource Include="html\freeboard\plugins\thirdparty\justgage.1.0.1.js" />
-	  <BundleResource Include="html\freeboard\plugins\thirdparty\raphael.2.1.0.min.js" />
+	  <BunfdleResource Include="html\freeboard\plugins\.DS_Store" />
+	  <EmbeddedResource Include="html\freeboard\plugins\cyblion\browsermqtt.js" />
+	  <EmbeddedResource Include="html\freeboard\plugins\cyblion\cyblion.datasource.js" />
+	  <EmbeddedResource Include="html\freeboard\plugins\cyblion\cyblion.decryptor.js" />
+	  <EmbeddedResource Include="html\freeboard\plugins\cyblion\cyblion.mqtt.js" />
+	  <EmbeddedResource Include="html\freeboard\plugins\freeboard\freeboard.datasources.js" />
+	  <EmbeddedResource Include="html\freeboard\plugins\freeboard\freeboard.widgets.js" />
+	  <EmbeddedResource Include="html\freeboard\plugins\thirdparty\jquery.sparkline.min.js" />
+	  <EmbeddedResource Include="html\freeboard\plugins\thirdparty\justgage.1.0.1.js" />
+	  <EmbeddedResource Include="html\freeboard\plugins\thirdparty\raphael.2.1.0.min.js" />
+	  <EmbeddedResource Include="html\freeboard\img\*" />
 	</ItemGroup>
 </Project>

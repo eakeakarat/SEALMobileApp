@@ -33,11 +33,11 @@ namespace SEALMobile.Views
         public LoginPage()
         {
             InitializeComponent();
-            //user_value.Text = "cpsSECteam@gmail.com";
-            //pass_value.Text = "1q2w3e4r#Cipherflow";
+            user_value.Text = "cpsSECteam@gmail.com";
+            pass_value.Text = "1q2w3e4r#Cipherflow";
 
-            user_value.Text = "eakarat.sak@ku.th";
-            pass_value.Text = "5546";
+            //user_value.Text = "eakarat.sak@ku.th";
+            //pass_value.Text = "5546";
 
 
             documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

@@ -53,7 +53,7 @@ namespace SEALMobile.Views
                 Variables = new
                 {
                     pjid = project.projectid,
-                    htag = "cloud",
+                    htag = "Dashboard",
                 }
             };
 
