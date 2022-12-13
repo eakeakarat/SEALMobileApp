@@ -10,7 +10,7 @@ async function getWebToken() {
     if (res.ok) {
         let ret = await res.text();
         
-        return ret;
+        return ret.replace(/(^"|"$)/g, '');
 
     } else {
         return 'eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdHgiOnsidXNlcmlkIjoiVTkzODc4ODI5NDUyMiIsImNsaWVudGlkIjoiN' +
@@ -24,4 +24,4 @@ function getToken() {
     return x;
 }
 
-getWebToken().then(ret => { x = ret.replace(/(^"|"$)/g, ''); console.log(x); })
+getWebToken().then(ret => { x = ret; console.log(x); })

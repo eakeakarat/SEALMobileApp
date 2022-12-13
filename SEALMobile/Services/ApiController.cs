@@ -83,7 +83,7 @@ namespace SEALMobile.Services
             //Console.WriteLine(data.ToString());
 
             var projectida = File.ReadAllText(path);
-            Console.WriteLine(projectida);
+            //Console.WriteLine(projectida);
 
             //SEAL DECRYPTED
             var seal = new SEALENY(projectida);
@@ -96,7 +96,7 @@ namespace SEALMobile.Services
             string encrypt = data;
             File.WriteAllText(encPath, encrypt);
 
-            Console.WriteLine(encrypt);
+            //Console.WriteLine(encrypt);
             //Console.WriteLine("First 20 char: "+ encrypt.Substring(0, 20));
 
 
